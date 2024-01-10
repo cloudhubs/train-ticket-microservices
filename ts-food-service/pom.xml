@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cloudhubs.trainticket</groupId>
-    <artifactId>ts-assurance-service</artifactId>
+    <artifactId>ts-food-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ts-assurance-service</name>
-    <description>ts-assurance-service</description>
+    <name>ts-food-service</name>
+    <description>ts-food-service</description>
     <properties>
         <java.version>17</java.version>
     </properties>
