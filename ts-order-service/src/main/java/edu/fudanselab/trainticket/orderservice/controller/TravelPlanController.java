@@ -1,14 +1,14 @@
-package edu.fudanselab.trainticket.controller;
+package edu.fudanselab.trainticket.orderservice.controller;
 
+import edu.fudanselab.trainticket.entity.TransferTravelInfo;
 import edu.fudanselab.trainticket.entity.TripInfo;
+import edu.fudanselab.trainticket.service.TravelPlanService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.entity.TransferTravelInfo;
-import edu.fudanselab.trainticket.service.TravelPlanService;
 
 import static org.springframework.http.ResponseEntity.ok;
 
