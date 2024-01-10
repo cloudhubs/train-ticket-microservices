@@ -1,8 +1,9 @@
-package edu.fudanselab.trainticket.repository;
+package edu.fudanselab.trainticket.orderservice.repository;
 
 import edu.fudanselab.trainticket.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
 import java.util.Optional;
 

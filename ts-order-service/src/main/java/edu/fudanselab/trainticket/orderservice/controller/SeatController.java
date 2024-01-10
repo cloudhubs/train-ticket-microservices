@@ -1,13 +1,13 @@
-package edu.fudanselab.trainticket.controller;
+package edu.fudanselab.trainticket.orderservice.controller;
 
 import edu.fudanselab.trainticket.entity.Seat;
+import edu.fudanselab.trainticket.service.SeatService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.service.SeatService;
 
 import static org.springframework.http.ResponseEntity.ok;
 
