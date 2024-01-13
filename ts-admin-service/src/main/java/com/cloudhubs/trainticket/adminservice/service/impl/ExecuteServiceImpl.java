@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.adminservice.service.impl;
 
-import edu.fudanselab.trainticket.entity.Order;
-import edu.fudanselab.trainticket.entity.OrderStatus;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.adminservice.entity.Order;
+import com.cloudhubs.trainticket.adminservice.entity.OrderStatus;
+import com.cloudhubs.trainticket.adminservice.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +14,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import edu.fudanselab.trainticket.service.ExecuteService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
+import com.cloudhubs.trainticket.adminservice.service.ExecuteService;
+import com.cloudhubs.trainticket.adminservice.service.ServiceResolver;
 
 /**
  * @author fdse

@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.adminservice.service;
 
-import edu.fudanselab.trainticket.entity.OrderTicketsInfo;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.adminservice.entity.OrderTicketsInfo;
+import com.cloudhubs.trainticket.adminservice.util.Response;
 import org.springframework.http.HttpHeaders;
 
 

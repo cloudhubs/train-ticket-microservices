@@ -1,9 +1,9 @@
-package com.cloudhubs.trainticket.adminservice.service;
+package com.cloudhubs.trainticket.adminservice.service.impl;
 
-import com.cloudhubs.trainticket.adminservice.util.Response;
-import org.springframework.http.HttpHeaders;
 import com.cloudhubs.trainticket.adminservice.entity.WaitListOrder;
 import com.cloudhubs.trainticket.adminservice.entity.WaitListOrderVO;
+import com.cloudhubs.trainticket.adminservice.util.Response;
+import org.springframework.http.HttpHeaders;
 
 public interface WaitListOrderService {
 

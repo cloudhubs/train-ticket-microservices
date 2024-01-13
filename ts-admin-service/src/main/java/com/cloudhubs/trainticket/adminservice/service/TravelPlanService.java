@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.adminservice.service;
 
-import edu.fudanselab.trainticket.entity.TransferTravelInfo;
-import edu.fudanselab.trainticket.entity.TripInfo;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.adminservice.entity.TransferTravelInfo;
+import com.cloudhubs.trainticket.adminservice.entity.TripInfo;
 import org.springframework.http.HttpHeaders;
-import edu.fudanselab.trainticket.entity.TransferTravelInfo;
+import com.cloudhubs.trainticket.adminservice.util.Response;
+import com.cloudhubs.trainticket.adminservice.entity.TransferTravelInfo;
 
 /**
  * @author fdse

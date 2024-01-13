@@ -1,9 +1,9 @@
 package com.cloudhubs.trainticket.adminservice.service.impl;
 
-import edu.fudanselab.trainticket.entity.Order;
-import edu.fudanselab.trainticket.service.AdminOrderService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.adminservice.entity.Order;
+import com.cloudhubs.trainticket.adminservice.service.AdminOrderService;
+import com.cloudhubs.trainticket.adminservice.service.ServiceResolver;
+import com.cloudhubs.trainticket.adminservice.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
