@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.cancel.service;
 
-import edu.fudanselab.trainticket.entity.Seat;
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.entity.Order;
-import edu.fudanselab.trainticket.entity.OrderAlterInfo;
-import edu.fudanselab.trainticket.entity.OrderInfo;
+import com.cloudhubs.trainticket.cancel.entity.Seat;
+import com.cloudhubs.trainticket.cancel.util.Response;
+import com.cloudhubs.trainticket.cancel.entity.Order;
+import com.cloudhubs.trainticket.cancel.entity.OrderAlterInfo;
+import com.cloudhubs.trainticket.cancel.entity.OrderInfo;
 import org.springframework.http.HttpHeaders;
 
 import java.util.Date;

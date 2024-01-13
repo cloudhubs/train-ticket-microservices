@@ -1,14 +1,13 @@
 package com.cloudhubs.trainticket.cancel.service.impl;
 
-import edu.fudanselab.trainticket.dto.UserDto;
-import edu.fudanselab.trainticket.entity.User;
-import edu.fudanselab.trainticket.service.AdminUserService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.cancel.dto.UserDto;
+import com.cloudhubs.trainticket.cancel.entity.User;
+import com.cloudhubs.trainticket.cancel.service.AdminUserService;
+import com.cloudhubs.trainticket.cancel.service.ServiceResolver;
+import com.cloudhubs.trainticket.cancel.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -16,7 +15,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
 
 import java.util.List;
 

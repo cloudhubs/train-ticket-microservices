@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.cancel.service;
 
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.cancel.util.Response;
 import org.springframework.http.HttpHeaders;
-import edu.fudanselab.trainticket.entity.RouteInfo;
+import com.cloudhubs.trainticket.cancel.entity.RouteInfo;
 
 
 import java.util.List;
