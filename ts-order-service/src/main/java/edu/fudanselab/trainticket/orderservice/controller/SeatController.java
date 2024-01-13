@@ -1,3 +1,4 @@
+/*
 package edu.fudanselab.trainticket.orderservice.controller;
 
 import edu.fudanselab.trainticket.entity.Seat;
@@ -11,9 +12,11 @@ import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.ResponseEntity.ok;
 
+*/
 /**
  * @author fdse
- */
+ *//*
+
 @RestController
 @RequestMapping("/api/v1/seatservice")
 public class SeatController {
@@ -28,13 +31,15 @@ public class SeatController {
         return "Welcome to [ Seat Service ] !";
     }
 
-    /**
+    */
+/**
      * Assign seats by seat request
      *
      * @param seatRequest seat request
      * @param headers headers
      * @return HttpEntity
-     */
+     *//*
+
     @CrossOrigin(origins = "*")
     @PostMapping(value = "/seats")
     public HttpEntity create(@RequestBody Seat seatRequest, @RequestHeader HttpHeaders headers) {
@@ -42,14 +47,16 @@ public class SeatController {
         return ok(seatService.distributeSeat(seatRequest, headers));
     }
 
-    /**
+    */
+/**
      * get left ticket of interval
      * query specific interval residual
      *
      * @param seatRequest seat request
      * @param headers headers
      * @return HttpEntity
-     */
+     *//*
+
     @CrossOrigin(origins = "*")
     @PostMapping(value = "/seats/left_tickets")
     public HttpEntity getLeftTicketOfInterval(@RequestBody Seat seatRequest, @RequestHeader HttpHeaders headers) {
@@ -59,3 +66,4 @@ public class SeatController {
     }
 
 }
+*/

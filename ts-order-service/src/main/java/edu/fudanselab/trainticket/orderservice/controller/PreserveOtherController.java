@@ -1,3 +1,4 @@
+/*
 package edu.fudanselab.trainticket.orderservice.controller;
 
 import edu.fudanselab.trainticket.entity.OrderTicketsInfo;
@@ -11,9 +12,11 @@ import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.ResponseEntity.ok;
 
+*/
 /**
  * @author fdse
- */
+ *//*
+
 @RestController
 @RequestMapping("/api/v1/preserveotherservice")
 public class PreserveOtherController {
@@ -37,3 +40,4 @@ public class PreserveOtherController {
     }
 
 }
+*/
