@@ -1,10 +1,12 @@
 package edu.fudanselab.trainticket.orderservice.controller;
 
-import edu.fudanselab.trainticket.entity.Order;
-import edu.fudanselab.trainticket.service.AdminOrderService;
+import edu.fudanselab.trainticket.adminorder.service.AdminOrderService;
+import edu.fudanselab.trainticket.common.entity.Order;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
@@ -16,12 +18,15 @@ import static org.springframework.http.ResponseEntity.ok;
  */
 @RestController
 @RequestMapping("/api/v1/adminorderservice")
+
 public class AdminOrderController {
 
     @Autowired
     AdminOrderService adminOrderService;
 
     private static final Logger logger = LoggerFactory.getLogger(AdminOrderController.class);
+
+
 
     @GetMapping(path = "/welcome")
     public String home(@RequestHeader HttpHeaders headers) {

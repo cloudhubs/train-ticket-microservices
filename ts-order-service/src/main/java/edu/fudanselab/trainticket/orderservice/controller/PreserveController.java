@@ -1,7 +1,7 @@
 package edu.fudanselab.trainticket.orderservice.controller;
 
-import edu.fudanselab.trainticket.entity.OrderTicketsInfo;
-import edu.fudanselab.trainticket.service.PreserveService;
+import edu.fudanselab.trainticket.common.entity.OrderTicketsInfo;
+import edu.fudanselab.trainticket.orderservice.service.PreserveService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

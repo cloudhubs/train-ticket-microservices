@@ -1,3 +1,4 @@
+/*
 package edu.fudanselab.trainticket.orderservice.repository;
 
 import edu.fudanselab.trainticket.entity.Order;
@@ -7,9 +8,11 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Optional;
 
+*/
 /**
  * @author fdse
- */
+ *//*
+
 @Repository
 public interface OrderRepository extends JpaRepository<Order, String> {
 
@@ -26,3 +29,4 @@ public interface OrderRepository extends JpaRepository<Order, String> {
     @Override
     void deleteById(String id);
 }
+*/

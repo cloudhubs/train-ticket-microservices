@@ -1,3 +1,4 @@
+/*
 package edu.fudanselab.trainticket.orderservice.controller;
 
 import edu.fudanselab.trainticket.entity.TransferTravelInfo;
@@ -12,9 +13,11 @@ import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.ResponseEntity.ok;
 
+*/
 /**
  * @author fdse
- */
+ *//*
+
 @RestController
 @RequestMapping("api/v1/travelplanservice")
 public class TravelPlanController {
@@ -54,3 +57,4 @@ public class TravelPlanController {
     }
 
 }
+*/
