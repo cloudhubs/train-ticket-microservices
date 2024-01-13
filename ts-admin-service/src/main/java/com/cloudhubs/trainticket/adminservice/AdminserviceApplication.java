@@ -16,8 +16,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 //@EnableSwagger2
 //@EnableAsync
 //@IntegrationComponentScan
-@EntityScan("com.cloudhubs.trainticket.adminservice.entity")
-@EnableJpaRepositories("com.cloudhubs.trainticket.adminservice.repository")
+//@EntityScan("com.cloudhubs.trainticket.adminservice.entity")
+//@EnableJpaRepositories("com.cloudhubs.trainticket.adminservice.repository")
 public class AdminserviceApplication {
 
     public static void main(String[] args) {
