@@ -1,6 +1,6 @@
 spring:
   application:
-    name: test-service
+    name: ts-order-service
   cloud:
     consul:
       discovery:

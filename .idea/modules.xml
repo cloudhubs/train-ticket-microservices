@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/ts-new-gateway/gateway.iml" filepath="$PROJECT_DIR$/ts-new-gateway/gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/train-ticket-microservices.iml" filepath="$PROJECT_DIR$/.idea/train-ticket-microservices.iml" />
-    </modules>
-  </component>
-</project>
