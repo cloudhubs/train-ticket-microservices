@@ -1,12 +1,12 @@
 package com.cloudhubs.trainticket.auth.controller;
 
 
-import edu.fudanselab.trainticket.dto.BasicAuthDto;
-import edu.fudanselab.trainticket.entity.AuthUser;
-import edu.fudanselab.trainticket.exception.UserOperationException;
-import edu.fudanselab.trainticket.service.AuthUserService;
-import edu.fudanselab.trainticket.service.TokenService;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.auth.dto.BasicAuthDto;
+import com.cloudhubs.trainticket.auth.entity.AuthUser;
+import com.cloudhubs.trainticket.auth.exception.UserOperationException;
+import com.cloudhubs.trainticket.auth.service.AuthUserService;
+import com.cloudhubs.trainticket.auth.service.TokenService;
+import com.cloudhubs.trainticket.auth.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

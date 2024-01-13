@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.auth.repository;
 
-import edu.fudanselab.trainticket.entity.AuthUser;
+import com.cloudhubs.trainticket.auth.entity.AuthUser;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

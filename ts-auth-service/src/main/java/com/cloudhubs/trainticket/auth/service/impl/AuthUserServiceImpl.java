@@ -1,19 +1,19 @@
 package com.cloudhubs.trainticket.auth.service.impl;
 
-import edu.fudanselab.trainticket.constant.AuthConstant;
-import edu.fudanselab.trainticket.constant.InfoConstant;
-import edu.fudanselab.trainticket.dto.AuthDto;
-import edu.fudanselab.trainticket.entity.AuthUser;
-import edu.fudanselab.trainticket.exception.UserOperationException;
-import edu.fudanselab.trainticket.repository.AuthUserRepository;
-import edu.fudanselab.trainticket.repository.UserRepository;
-import edu.fudanselab.trainticket.service.AuthUserService;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.auth.constant.AuthConstant;
+import com.cloudhubs.trainticket.auth.constant.InfoConstant;
+import com.cloudhubs.trainticket.auth.dto.AuthDto;
+import com.cloudhubs.trainticket.auth.entity.AuthUser;
+import com.cloudhubs.trainticket.auth.exception.UserOperationException;
+import com.cloudhubs.trainticket.auth.repository.AuthUserRepository;
+import com.cloudhubs.trainticket.auth.repository.UserRepository;
+import com.cloudhubs.trainticket.auth.service.AuthUserService;
+import com.cloudhubs.trainticket.auth.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,8 +33,8 @@ public class AuthUserServiceImpl implements AuthUserService {
     @Autowired
     private AuthUserRepository authUserRepository;
 
-    @Autowired
-    protected PasswordEncoder passwordEncoder;
+//    @Autowired
+//    protected PasswordEncoder passwordEncoder;
 
     @Override
     public AuthUser saveUser(AuthUser user) {
@@ -58,7 +58,7 @@ public class AuthUserServiceImpl implements AuthUserService {
         AuthUser user = AuthUser.builder()
                 .userId(dto.getUserId())
                 .username(dto.getUserName())
-                .password(passwordEncoder.encode(dto.getPassword()))
+//                .password(passwordEncoder.encode(dto.getPassword()))
                 .roles(new HashSet<>(Arrays.asList(AuthConstant.ROLE_USER)))
                 .build();
         try {

@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.auth.config.jwt;
 
-import edu.fudanselab.trainticket.constant.InfoConstant;
-import edu.fudanselab.trainticket.entity.AuthUser;
+import com.cloudhubs.trainticket.auth.constant.InfoConstant;
+import com.cloudhubs.trainticket.auth.entity.AuthUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
