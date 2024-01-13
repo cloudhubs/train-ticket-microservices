@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.assurance.service.impl;
 
-import edu.fudanselab.trainticket.dto.UserDto;
-import edu.fudanselab.trainticket.entity.User;
-import edu.fudanselab.trainticket.service.AdminUserService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.assurance.dto.UserDto;
+import com.cloudhubs.trainticket.assurance.entity.User;
+import com.cloudhubs.trainticket.assurance.service.AdminUserService;
+import com.cloudhubs.trainticket.assurance.service.ServiceResolver;
+import com.cloudhubs.trainticket.assurance.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

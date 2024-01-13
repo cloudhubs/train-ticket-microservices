@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.assurance.util;
 
-import edu.fudanselab.trainticket.entity.Contacts;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.assurance.entity.Contacts;
+import com.cloudhubs.trainticket.assurance.util.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
@@ -10,13 +10,13 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-import edu.fudanselab.trainticket.entity.WaitListOrderStatus;
-import edu.fudanselab.trainticket.entity.WaitListOrderVO;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.service.WaitListOrderService;
+import com.cloudhubs.trainticket.assurance.entity.WaitListOrderStatus;
+import com.cloudhubs.trainticket.assurance.entity.WaitListOrderVO;
+import com.cloudhubs.trainticket.assurance.service.ServiceResolver;
+import com.cloudhubs.trainticket.assurance.service.WaitListOrderService;
 
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
+//import java.util.concurrent.TimeUnit;
 
 public class PollThread extends Thread{
 
@@ -57,11 +57,11 @@ public class PollThread extends Thread{
             Response postResult=doPreserve(service_url,requestEntityPreserve);
             if(postResult.getStatus()==0){
                 //预定失败
-                try {
-                    TimeUnit.MINUTES.sleep(INTERVAL_MINUTES);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    TimeUnit.MINUTES.sleep(INTERVAL_MINUTES);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             } else{
                 // preserve success
                 waitListOrderService.modifyWaitListOrderStatus(WaitListOrderStatus.COLLECTED.getCode(),waitListOrderVO.getAccountId());

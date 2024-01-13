@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.assurance.service.impl;
 
-import edu.fudanselab.trainticket.entity.Route;
-import edu.fudanselab.trainticket.entity.RouteInfoCommon;
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.service.AdminRouteService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
+import com.cloudhubs.trainticket.assurance.entity.Route;
+import com.cloudhubs.trainticket.assurance.entity.RouteInfoCommon;
+import com.cloudhubs.trainticket.assurance.util.Response;
+import com.cloudhubs.trainticket.assurance.service.AdminRouteService;
+import com.cloudhubs.trainticket.assurance.service.ServiceResolver;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

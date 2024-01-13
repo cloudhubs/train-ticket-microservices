@@ -1,9 +1,9 @@
 package com.cloudhubs.trainticket.assurance.service;
 
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.entity.PaymentInfo;
-import edu.fudanselab.trainticket.entity.InsidePayment;
-import edu.fudanselab.trainticket.entity.AccountInfo;
+import com.cloudhubs.trainticket.assurance.entity.AccountInfo;
+import com.cloudhubs.trainticket.assurance.entity.InsidePayment;
+import com.cloudhubs.trainticket.assurance.entity.PaymentInfo;
+import com.cloudhubs.trainticket.assurance.util.Response;
 import org.springframework.http.HttpHeaders;
 
 

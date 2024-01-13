@@ -1,13 +1,13 @@
 package com.cloudhubs.trainticket.assurance.service.impl;
 
-import edu.fudanselab.trainticket.entity.AdminTrip;
-import edu.fudanselab.trainticket.entity.Route;
-import edu.fudanselab.trainticket.entity.TrainType;
-import edu.fudanselab.trainticket.entity.TravelInfo;
-import edu.fudanselab.trainticket.service.AdminTravelService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.util.JsonUtils;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.assurance.entity.AdminTrip;
+import com.cloudhubs.trainticket.assurance.entity.Route;
+import com.cloudhubs.trainticket.assurance.entity.TrainType;
+import com.cloudhubs.trainticket.assurance.entity.TravelInfo;
+import com.cloudhubs.trainticket.assurance.service.AdminTravelService;
+import com.cloudhubs.trainticket.assurance.service.ServiceResolver;
+import com.cloudhubs.trainticket.assurance.util.JsonUtils;
+import com.cloudhubs.trainticket.assurance.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

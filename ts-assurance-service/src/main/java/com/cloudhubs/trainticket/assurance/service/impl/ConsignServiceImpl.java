@@ -1,11 +1,11 @@
 package com.cloudhubs.trainticket.assurance.service.impl;
 
-import edu.fudanselab.trainticket.entity.ConsignRecord;
-import edu.fudanselab.trainticket.entity.Consign;
-import edu.fudanselab.trainticket.repository.ConsignRepository;
-import edu.fudanselab.trainticket.service.ConsignService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.assurance.entity.ConsignRecord;
+import com.cloudhubs.trainticket.assurance.entity.Consign;
+import com.cloudhubs.trainticket.assurance.repository.ConsignRepository;
+import com.cloudhubs.trainticket.assurance.service.ConsignService;
+import com.cloudhubs.trainticket.assurance.service.ServiceResolver;
+import com.cloudhubs.trainticket.assurance.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

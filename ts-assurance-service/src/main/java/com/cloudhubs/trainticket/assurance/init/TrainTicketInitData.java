@@ -1,9 +1,9 @@
 package com.cloudhubs.trainticket.assurance.init;
 
-import edu.fudanselab.trainticket.entity.Payment;
-import edu.fudanselab.trainticket.repository.PaymentRepository;
-import edu.fudanselab.trainticket.service.PaymentService;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.assurance.entity.Payment;
+import com.cloudhubs.trainticket.assurance.repository.PaymentRepository;
+import com.cloudhubs.trainticket.assurance.service.PaymentService;
+import com.cloudhubs.trainticket.assurance.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

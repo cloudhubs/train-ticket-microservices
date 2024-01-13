@@ -2,15 +2,15 @@ package com.cloudhubs.trainticket.assurance.service.impl;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.fudanselab.trainticket.entity.TravelResult;
-import edu.fudanselab.trainticket.entity.Route;
-import edu.fudanselab.trainticket.entity.Travel;
-import edu.fudanselab.trainticket.entity.PriceConfig;
-import edu.fudanselab.trainticket.entity.TrainType;
-import edu.fudanselab.trainticket.util.JsonUtils;
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.service.BasicService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
+import com.cloudhubs.trainticket.assurance.entity.TravelResult;
+import com.cloudhubs.trainticket.assurance.entity.Route;
+import com.cloudhubs.trainticket.assurance.entity.Travel;
+import com.cloudhubs.trainticket.assurance.entity.PriceConfig;
+import com.cloudhubs.trainticket.assurance.entity.TrainType;
+import com.cloudhubs.trainticket.assurance.util.JsonUtils;
+import com.cloudhubs.trainticket.assurance.util.Response;
+import com.cloudhubs.trainticket.assurance.service.BasicService;
+import com.cloudhubs.trainticket.assurance.service.ServiceResolver;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: ts-admin-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/assurance-service
+    username: root
+    password: admin@123#
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}-${server.port}-${random.int[1,99]}
+        prefer-ip-address: true
+      config:
+        enabled: false
+      host: localhost
+      port: 8500
+
+server:
+  port: 8891

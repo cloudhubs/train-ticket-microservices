@@ -1,14 +1,14 @@
 package com.cloudhubs.trainticket.assurance.service.impl;
 
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.entity.StationFoodStore;
-import edu.fudanselab.trainticket.repository.StationFoodRepository;
+import com.cloudhubs.trainticket.assurance.util.Response;
+import com.cloudhubs.trainticket.assurance.entity.StationFoodStore;
+import com.cloudhubs.trainticket.assurance.repository.StationFoodRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
-import edu.fudanselab.trainticket.service.StationFoodService;
+import com.cloudhubs.trainticket.assurance.service.StationFoodService;
 
 import java.util.List;
 

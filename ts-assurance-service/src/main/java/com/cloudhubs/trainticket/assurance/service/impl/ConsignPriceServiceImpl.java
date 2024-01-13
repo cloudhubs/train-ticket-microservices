@@ -1,9 +1,9 @@
 package com.cloudhubs.trainticket.assurance.service.impl;
 
-import edu.fudanselab.trainticket.entity.ConsignPrice;
-import edu.fudanselab.trainticket.repository.ConsignPriceConfigRepository;
-import edu.fudanselab.trainticket.service.ConsignPriceService;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.assurance.entity.ConsignPrice;
+import com.cloudhubs.trainticket.assurance.repository.ConsignPriceConfigRepository;
+import com.cloudhubs.trainticket.assurance.service.ConsignPriceService;
+import com.cloudhubs.trainticket.assurance.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

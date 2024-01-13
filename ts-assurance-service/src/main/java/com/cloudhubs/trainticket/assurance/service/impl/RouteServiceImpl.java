@@ -1,16 +1,16 @@
 package com.cloudhubs.trainticket.assurance.service.impl;
 
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.assurance.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import edu.fudanselab.trainticket.entity.Route;
-import edu.fudanselab.trainticket.entity.RouteInfo;
-import edu.fudanselab.trainticket.repository.RouteRepository;
-import edu.fudanselab.trainticket.service.RouteService;
+import com.cloudhubs.trainticket.assurance.entity.Route;
+import com.cloudhubs.trainticket.assurance.entity.RouteInfo;
+import com.cloudhubs.trainticket.assurance.repository.RouteRepository;
+import com.cloudhubs.trainticket.assurance.service.RouteService;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,12 +1,12 @@
 package com.cloudhubs.trainticket.assurance.init;
 
-import edu.fudanselab.trainticket.entity.Assurance;
-import edu.fudanselab.trainticket.entity.AssuranceType;
-import edu.fudanselab.trainticket.entity.AssuranceTypeBean;
-import edu.fudanselab.trainticket.entity.PlainAssurance;
-import edu.fudanselab.trainticket.repository.AssuranceRepository;
-import edu.fudanselab.trainticket.service.AssuranceService;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.assurance.entity.Assurance;
+import com.cloudhubs.trainticket.assurance.entity.AssuranceType;
+import com.cloudhubs.trainticket.assurance.entity.AssuranceTypeBean;
+import com.cloudhubs.trainticket.assurance.entity.PlainAssurance;
+import com.cloudhubs.trainticket.assurance.repository.AssuranceRepository;
+import com.cloudhubs.trainticket.assurance.service.AssuranceService;
+import com.cloudhubs.trainticket.assurance.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

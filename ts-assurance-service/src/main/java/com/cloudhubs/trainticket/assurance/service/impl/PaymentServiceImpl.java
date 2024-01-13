@@ -1,11 +1,11 @@
 package com.cloudhubs.trainticket.assurance.service.impl;
 
-import edu.fudanselab.trainticket.entity.Money;
-import edu.fudanselab.trainticket.entity.Payment;
-import edu.fudanselab.trainticket.repository.AddMoneyRepository;
-import edu.fudanselab.trainticket.repository.PaymentRepository;
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.service.PaymentService;
+import com.cloudhubs.trainticket.assurance.entity.Money;
+import com.cloudhubs.trainticket.assurance.entity.Payment;
+import com.cloudhubs.trainticket.assurance.repository.AddMoneyRepository;
+import com.cloudhubs.trainticket.assurance.repository.PaymentRepository;
+import com.cloudhubs.trainticket.assurance.util.Response;
+import com.cloudhubs.trainticket.assurance.service.PaymentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

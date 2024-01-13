@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.assurance.service.impl;
 
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.assurance.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -10,12 +10,12 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
-import edu.fudanselab.trainticket.entity.WaitListOrder;
-import edu.fudanselab.trainticket.entity.WaitListOrderStatus;
-import edu.fudanselab.trainticket.entity.WaitListOrderVO;
-import edu.fudanselab.trainticket.repository.WaitListOrderRepository;
-import edu.fudanselab.trainticket.service.WaitListOrderService;
-import edu.fudanselab.trainticket.util.PollThread;
+import com.cloudhubs.trainticket.assurance.entity.WaitListOrder;
+import com.cloudhubs.trainticket.assurance.entity.WaitListOrderStatus;
+import com.cloudhubs.trainticket.assurance.entity.WaitListOrderVO;
+import com.cloudhubs.trainticket.assurance.repository.WaitListOrderRepository;
+import com.cloudhubs.trainticket.assurance.service.WaitListOrderService;
+import com.cloudhubs.trainticket.assurance.util.PollThread;
 
 import java.util.*;
 import java.util.stream.Collectors;
