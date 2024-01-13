@@ -5,7 +5,7 @@ import com.cloudhubs.trainticket.adminservice.dto.BasicAuthDto;
 import com.cloudhubs.trainticket.adminservice.entity.AuthUser;
 import com.cloudhubs.trainticket.adminservice.exception.UserOperationException;
 import com.cloudhubs.trainticket.adminservice.service.AuthUserService;
-import com.cloudhubs.trainticket.adminservice.service.TokenService;
+//import com.cloudhubs.trainticket.adminservice.service.TokenService;
 import com.cloudhubs.trainticket.adminservice.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,8 +27,8 @@ public class AuthUserController {
     @Autowired
     private AuthUserService authUserService;
 
-    @Autowired
-    private TokenService tokenService;
+    /*@Autowired
+    private TokenService tokenService;*/
 
     private static final Logger logger = LoggerFactory.getLogger(AuthUserController.class);
 
@@ -37,7 +37,7 @@ public class AuthUserController {
         return "Hello";
     }
 
-    @PostMapping("/login")
+    /*@PostMapping("/login")
     public ResponseEntity<Response> getToken(@RequestBody BasicAuthDto dao , @RequestHeader HttpHeaders headers) {
         logger.info("Login request of username: {}", dao.getUsername());
         try {
@@ -47,7 +47,7 @@ public class AuthUserController {
             logger.error("[getToken][tokenService.getToken error][UserOperationException, message: {}]", e.getMessage());
             return ResponseEntity.ok(new Response<>(0, "get token error", null));
         }
-    }
+    }*/
 
     @GetMapping("/getAllUser")
     public ResponseEntity<List<AuthUser>> getAllUser(@RequestHeader HttpHeaders headers) {

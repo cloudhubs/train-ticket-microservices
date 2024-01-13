@@ -1,6 +1,7 @@
 package com.cloudhubs.trainticket.adminservice.repository;
 
 import com.cloudhubs.trainticket.adminservice.entity.AuthUser;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
@@ -8,7 +9,7 @@ import java.util.Optional;
 /**
  * @author fdse
  */
-public interface AuthUserRepository extends CrudRepository<AuthUser, String> {
+public interface AuthUserRepository extends JpaRepository<AuthUser, String> {
 
     /**
      * find by username

@@ -1,3 +1,4 @@
+/*
 package com.cloudhubs.trainticket.adminservice.service.impl;
 
 //import com.cloudhubs.trainticket.adminservice.config.jwt.JWTProvider;
@@ -26,9 +27,11 @@ import org.springframework.web.client.RestTemplate;
 
 import java.text.MessageFormat;
 
+*/
 /**
  * @author fdse
- */
+ *//*
+
 @Service
 public class TokenServiceImpl implements TokenService {
     private static final Logger LOGGER = LoggerFactory.getLogger(TokenServiceImpl.class);
@@ -45,8 +48,10 @@ public class TokenServiceImpl implements TokenService {
     @Autowired
     private RestTemplate restTemplate;
 
-    /*@Autowired
-    private DiscoveryClient discoveryClient;*/
+    */
+/*@Autowired
+    private DiscoveryClient discoveryClient;*//*
+
 
     @Autowired
     private ServiceResolver serviceResolver;
@@ -92,3 +97,4 @@ public class TokenServiceImpl implements TokenService {
         return new Response<>(1, "login success", new TokenDto(authUser.getUserId(), username, token));
     }
 }
+*/
