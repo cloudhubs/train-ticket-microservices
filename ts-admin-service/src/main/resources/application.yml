@@ -2,13 +2,13 @@ spring:
   application:
     name: ts-admin-service
   datasource:
-    url: jdbc:mysql://localhost:3306/admin-service
+    url: jdbc:mysql://localhost:3306/admin-service?createDatabaseIfNotExist=true
     username: root
     password: admin@123#
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 
   cloud:
     consul:

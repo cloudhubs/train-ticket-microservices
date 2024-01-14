@@ -4,10 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
+import jakarta.persistence.*;
 
-import javax.persistence.Column;
+/*import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.Id;*/
 
 
 /**

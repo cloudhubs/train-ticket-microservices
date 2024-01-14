@@ -3,10 +3,11 @@ package com.cloudhubs.trainticket.assurance.entity;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
+/*import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.Id;*/
+import jakarta.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 

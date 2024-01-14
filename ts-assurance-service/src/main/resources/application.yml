@@ -2,7 +2,7 @@ spring:
   application:
     name: ts-assurance-service
   datasource:
-    url: jdbc:mysql://localhost:3306/assurance-service
+    url: jdbc:mysql://localhost:3306/assurance-service?createDatabaseIfNotExist=true
     username: root
     password: admin@123#
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -3,10 +3,11 @@ package com.cloudhubs.trainticket.assurance.entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import jakarta.persistence.*;
 
-import javax.persistence.Column;
+/*import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.Id;*/
 import java.util.UUID;
 
 /**
