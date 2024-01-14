@@ -21,7 +21,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 
     //@Value("${swagger.controllerPackage}")
-    private String controllerPackagePath = "edu.fudanselab.trainticket.controller";
+    private String controllerPackagePath = "com.cloudhubs.trainticket.consign.controller";
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SwaggerConfig.class);
 

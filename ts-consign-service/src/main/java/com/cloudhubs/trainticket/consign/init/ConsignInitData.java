@@ -1,9 +1,9 @@
 package com.cloudhubs.trainticket.consign.init;
 
-import edu.fudanselab.trainticket.entity.Consign;
-import edu.fudanselab.trainticket.entity.ConsignRecord;
-import edu.fudanselab.trainticket.repository.ConsignRepository;
-import edu.fudanselab.trainticket.service.ConsignService;
+import com.cloudhubs.trainticket.consign.entity.Consign;
+import com.cloudhubs.trainticket.consign.entity.ConsignRecord;
+import com.cloudhubs.trainticket.consign.repository.ConsignRepository;
+import com.cloudhubs.trainticket.consign.service.ConsignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

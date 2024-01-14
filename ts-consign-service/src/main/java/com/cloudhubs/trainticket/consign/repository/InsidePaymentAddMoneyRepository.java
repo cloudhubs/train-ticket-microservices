@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.consign.repository;
 
-import edu.fudanselab.trainticket.entity.InsidePaymentMoney;
+import com.cloudhubs.trainticket.consign.entity.InsidePaymentMoney;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

@@ -1,5 +1,5 @@
 package com.cloudhubs.trainticket.consign.config;/*
-package edu.fudanselab.trainticket.config;
+package com.cloudhubs.trainticket.consign.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

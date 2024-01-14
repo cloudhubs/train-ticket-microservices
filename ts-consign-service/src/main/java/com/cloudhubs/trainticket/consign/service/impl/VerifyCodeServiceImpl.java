@@ -6,8 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
-import edu.fudanselab.trainticket.service.VerifyCodeService;
-import edu.fudanselab.trainticket.util.CookieUtil;
+import com.cloudhubs.trainticket.consign.service.VerifyCodeService;
+import com.cloudhubs.trainticket.consign.util.CookieUtil;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
+//import java.util.concurrent.TimeUnit;
 
 /**
  * @author fdse
@@ -38,7 +38,7 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
     public Cache<String, String> cacheCode = CacheBuilder.newBuilder()
             // max  size
             .maximumSize(CAPTCHA_EXPIRED)
-            .expireAfterAccess(CAPTCHA_EXPIRED, TimeUnit.SECONDS)
+//            .expireAfterAccess(CAPTCHA_EXPIRED, TimeUnit.SECONDS)
             .build();
 
     private static char mapTable[] = {

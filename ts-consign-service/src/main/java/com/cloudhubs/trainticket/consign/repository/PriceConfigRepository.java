@@ -1,9 +1,10 @@
 package com.cloudhubs.trainticket.consign.repository;
 
-import edu.fudanselab.trainticket.entity.PriceConfig;
+import com.cloudhubs.trainticket.consign.entity.PriceConfig;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+
 import java.util.List;
 import java.util.Optional;
 
