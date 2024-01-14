@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.food.service;
 
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.entity.DeliveryInfo;
-import edu.fudanselab.trainticket.entity.FoodDeliveryOrder;
-import edu.fudanselab.trainticket.entity.SeatInfo;
-import edu.fudanselab.trainticket.entity.TripOrderInfo;
+import com.cloudhubs.trainticket.food.util.Response;
+import com.cloudhubs.trainticket.food.entity.DeliveryInfo;
+import com.cloudhubs.trainticket.food.entity.FoodDeliveryOrder;
+import com.cloudhubs.trainticket.food.entity.SeatInfo;
+import com.cloudhubs.trainticket.food.entity.TripOrderInfo;
 import org.springframework.http.HttpHeaders;
 
 public interface FoodDeliveryService {

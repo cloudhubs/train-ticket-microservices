@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.contacts.repository;
 
-import edu.fudanselab.trainticket.entity.Contacts;
+import com.cloudhubs.trainticket.contacts.entity.Contacts;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

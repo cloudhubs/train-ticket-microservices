@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-import edu.fudanselab.trainticket.entity.Food;
+import com.cloudhubs.trainticket.food.entity.Food;
 
 @Data
 @NoArgsConstructor

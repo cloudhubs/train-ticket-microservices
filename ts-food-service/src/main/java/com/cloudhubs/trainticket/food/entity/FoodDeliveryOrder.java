@@ -6,9 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
-import edu.fudanselab.trainticket.entity.Food;
+import com.cloudhubs.trainticket.food.entity.Food;
 
 @Data
 @Entity

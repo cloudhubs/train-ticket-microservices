@@ -1,16 +1,16 @@
 package com.cloudhubs.trainticket.food.service.impl;
 
 
-import edu.fudanselab.trainticket.service.FoodDeliveryService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.entity.FoodDeliveryOrder;
-import edu.fudanselab.trainticket.entity.DeliveryInfo;
-import edu.fudanselab.trainticket.entity.TripOrderInfo;
-import edu.fudanselab.trainticket.repository.FoodDeliveryOrderRepository;
-import edu.fudanselab.trainticket.entity.SeatInfo;
-import edu.fudanselab.trainticket.entity.StationFoodStoreInfo;
-import edu.fudanselab.trainticket.entity.Food;
+import com.cloudhubs.trainticket.food.service.FoodDeliveryService;
+import com.cloudhubs.trainticket.food.service.ServiceResolver;
+import com.cloudhubs.trainticket.food.util.Response;
+import com.cloudhubs.trainticket.food.entity.FoodDeliveryOrder;
+import com.cloudhubs.trainticket.food.entity.DeliveryInfo;
+import com.cloudhubs.trainticket.food.entity.TripOrderInfo;
+import com.cloudhubs.trainticket.food.repository.FoodDeliveryOrderRepository;
+import com.cloudhubs.trainticket.food.entity.SeatInfo;
+import com.cloudhubs.trainticket.food.entity.StationFoodStoreInfo;
+import com.cloudhubs.trainticket.food.entity.Food;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

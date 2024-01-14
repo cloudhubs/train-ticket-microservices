@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.food.entity;
 
-import edu.fudanselab.trainticket.entity.Food;
-import edu.fudanselab.trainticket.entity.StationFoodStore;
-import edu.fudanselab.trainticket.entity.TrainFood;
+import com.cloudhubs.trainticket.food.entity.Food;
+import com.cloudhubs.trainticket.food.entity.StationFoodStore;
+import com.cloudhubs.trainticket.food.entity.TrainFood;
 import lombok.Data;
 
 import java.util.List;

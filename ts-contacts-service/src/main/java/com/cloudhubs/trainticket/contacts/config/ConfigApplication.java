@@ -1,5 +1,5 @@
-package com.cloudhubs.trainticket.contacts.config;/*
-package edu.fudanselab.trainticket.config;
+/*
+package com.cloudhubs.trainticket.contacts.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

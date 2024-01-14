@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.food.init;
 
-import edu.fudanselab.trainticket.service.FoodDeliveryService;
+import com.cloudhubs.trainticket.food.service.FoodDeliveryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import edu.fudanselab.trainticket.entity.Food;
+import com.cloudhubs.trainticket.food.entity.Food;
 
 @Component
 public class FoodDeliveryInitData implements CommandLineRunner {

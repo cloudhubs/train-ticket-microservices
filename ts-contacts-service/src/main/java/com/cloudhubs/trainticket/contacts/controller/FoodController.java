@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.contacts.controller;
 
-import edu.fudanselab.trainticket.util.JsonUtils;
-import edu.fudanselab.trainticket.entity.FoodOrder;
-import edu.fudanselab.trainticket.entity.Delivery;
-import edu.fudanselab.trainticket.mq.RabbitSend;
-import edu.fudanselab.trainticket.service.FoodService;
+import com.cloudhubs.trainticket.contacts.entity.Delivery;
+import com.cloudhubs.trainticket.contacts.entity.FoodOrder;
+import com.cloudhubs.trainticket.contacts.util.JsonUtils;
+import com.cloudhubs.trainticket.contacts.mq.RabbitSend;
+import com.cloudhubs.trainticket.contacts.service.FoodService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

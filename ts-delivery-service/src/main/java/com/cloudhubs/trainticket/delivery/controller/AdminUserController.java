@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.delivery.controller;
 
-import edu.fudanselab.trainticket.dto.UserDto;
-import edu.fudanselab.trainticket.service.AdminUserService;
+import com.cloudhubs.trainticket.delivery.dto.UserDto;
+import com.cloudhubs.trainticket.delivery.service.AdminUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

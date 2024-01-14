@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.food.init;
 
-import edu.fudanselab.trainticket.entity.Food;
-import edu.fudanselab.trainticket.entity.StationFoodStore;
-import edu.fudanselab.trainticket.service.StationFoodService;
+import com.cloudhubs.trainticket.food.entity.Food;
+import com.cloudhubs.trainticket.food.entity.StationFoodStore;
+import com.cloudhubs.trainticket.food.service.StationFoodService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

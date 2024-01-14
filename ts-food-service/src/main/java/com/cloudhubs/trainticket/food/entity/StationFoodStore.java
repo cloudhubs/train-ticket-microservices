@@ -1,13 +1,13 @@
 package com.cloudhubs.trainticket.food.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import edu.fudanselab.trainticket.entity.Food;
+import com.cloudhubs.trainticket.food.entity.Food;
 import lombok.Data;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import java.util.List;
 
 @Data

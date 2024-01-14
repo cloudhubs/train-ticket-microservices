@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.food.repository;
 
-import edu.fudanselab.trainticket.entity.FoodDeliveryOrder;
+import com.cloudhubs.trainticket.food.entity.FoodDeliveryOrder;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

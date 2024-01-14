@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.contacts.init;
 
-import edu.fudanselab.trainticket.entity.Station;
-import edu.fudanselab.trainticket.service.StationService;
+import com.cloudhubs.trainticket.contacts.entity.Station;
+import com.cloudhubs.trainticket.contacts.service.StationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
