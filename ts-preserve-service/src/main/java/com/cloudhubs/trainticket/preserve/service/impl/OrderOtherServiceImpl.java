@@ -1,18 +1,18 @@
 package com.cloudhubs.trainticket.preserve.service.impl;
 
-import edu.fudanselab.trainticket.entity.Order;
-import edu.fudanselab.trainticket.entity.QueryInfo;
-import edu.fudanselab.trainticket.entity.OrderStatus;
-import edu.fudanselab.trainticket.entity.OrderSecurity;
-import edu.fudanselab.trainticket.entity.LeftTicketInfo;
-import edu.fudanselab.trainticket.entity.Seat;
-import edu.fudanselab.trainticket.entity.Ticket;
-import edu.fudanselab.trainticket.entity.SoldTicket;
-import edu.fudanselab.trainticket.entity.SeatClass;
-import edu.fudanselab.trainticket.service.OrderOtherService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.util.StringUtils;
+import com.cloudhubs.trainticket.preserve.entity.Order;
+import com.cloudhubs.trainticket.preserve.entity.QueryInfo;
+import com.cloudhubs.trainticket.preserve.entity.OrderStatus;
+import com.cloudhubs.trainticket.preserve.entity.OrderSecurity;
+import com.cloudhubs.trainticket.preserve.entity.LeftTicketInfo;
+import com.cloudhubs.trainticket.preserve.entity.Seat;
+import com.cloudhubs.trainticket.preserve.entity.Ticket;
+import com.cloudhubs.trainticket.preserve.entity.SoldTicket;
+import com.cloudhubs.trainticket.preserve.entity.SeatClass;
+import com.cloudhubs.trainticket.preserve.service.OrderOtherService;
+import com.cloudhubs.trainticket.preserve.service.ServiceResolver;
+import com.cloudhubs.trainticket.preserve.util.Response;
+import com.cloudhubs.trainticket.preserve.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +24,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import edu.fudanselab.trainticket.entity.OrderAlterInfo;
-import edu.fudanselab.trainticket.repository.OrderOtherRepository;
+import com.cloudhubs.trainticket.preserve.entity.OrderAlterInfo;
+import com.cloudhubs.trainticket.preserve.repository.OrderOtherRepository;
 
 import java.util.*;
 

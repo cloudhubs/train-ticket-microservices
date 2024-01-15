@@ -2,22 +2,22 @@ package com.cloudhubs.trainticket.preserve.service.impl;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.fudanselab.trainticket.entity.Trip;
-import edu.fudanselab.trainticket.entity.TripInfo;
-import edu.fudanselab.trainticket.entity.TripResponse;
-import edu.fudanselab.trainticket.entity.TravelResult;
-import edu.fudanselab.trainticket.entity.Travel;
-import edu.fudanselab.trainticket.entity.TripId;
-import edu.fudanselab.trainticket.entity.TripAllDetailInfo;
-import edu.fudanselab.trainticket.entity.Route;
-import edu.fudanselab.trainticket.entity.TripAllDetail;
-import edu.fudanselab.trainticket.entity.SeatClass;
-import edu.fudanselab.trainticket.entity.TrainType;
-import edu.fudanselab.trainticket.entity.Seat;
-import edu.fudanselab.trainticket.entity.AdminTrip;
-import edu.fudanselab.trainticket.util.JsonUtils;
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.util.StringUtils;
+import com.cloudhubs.trainticket.preserve.entity.Trip;
+import com.cloudhubs.trainticket.preserve.entity.TripInfo;
+import com.cloudhubs.trainticket.preserve.entity.TripResponse;
+import com.cloudhubs.trainticket.preserve.entity.TravelResult;
+import com.cloudhubs.trainticket.preserve.entity.Travel;
+import com.cloudhubs.trainticket.preserve.entity.TripId;
+import com.cloudhubs.trainticket.preserve.entity.TripAllDetailInfo;
+import com.cloudhubs.trainticket.preserve.entity.Route;
+import com.cloudhubs.trainticket.preserve.entity.TripAllDetail;
+import com.cloudhubs.trainticket.preserve.entity.SeatClass;
+import com.cloudhubs.trainticket.preserve.entity.TrainType;
+import com.cloudhubs.trainticket.preserve.entity.Seat;
+import com.cloudhubs.trainticket.preserve.entity.AdminTrip;
+import com.cloudhubs.trainticket.preserve.util.JsonUtils;
+import com.cloudhubs.trainticket.preserve.util.Response;
+import com.cloudhubs.trainticket.preserve.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +30,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.service.TravelService2;
-import edu.fudanselab.trainticket.repository.*;
+import com.cloudhubs.trainticket.preserve.service.ServiceResolver;
+import com.cloudhubs.trainticket.preserve.service.TravelService2;
+import com.cloudhubs.trainticket.preserve.repository.*;
 
 //import travel2.entity.AdminTrip;
 //import travel2.entity.Travel;
@@ -40,7 +40,7 @@ import edu.fudanselab.trainticket.repository.*;
 //import travel2.entity.TripAllDetail;
 //import travel2.repository.TripRepository;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import java.util.*;
 
 /**
@@ -125,7 +125,7 @@ public class TravelService2Impl implements TravelService2 {
     }
 
     @Override
-    public Response create(edu.fudanselab.trainticket.entity.TravelInfo info, HttpHeaders headers) {
+    public Response create(com.cloudhubs.trainticket.preserve.entity.TravelInfo info, HttpHeaders headers) {
         TripId ti = new TripId(info.getTripId());
         if (repository.findByTripId(ti) == null) {
             Trip trip = new Trip(ti, info.getTrainTypeName(), info.getStartStationName(),
@@ -152,7 +152,7 @@ public class TravelService2Impl implements TravelService2 {
     }
 
     @Override
-    public Response update(edu.fudanselab.trainticket.entity.TravelInfo info, HttpHeaders headers) {
+    public Response update(com.cloudhubs.trainticket.preserve.entity.TravelInfo info, HttpHeaders headers) {
         TripId ti = new TripId(info.getTripId());
         Trip t = repository.findByTripId(ti);
         if (t != null) {
@@ -330,7 +330,7 @@ public class TravelService2Impl implements TravelService2 {
                 basic_service_url + "/api/v1/basicservice/basic/travel",
                 HttpMethod.POST,
                 requestEntity,
-                new ParameterizedTypeReference<Response<edu.fudanselab.trainticket.entity.TravelResult>>() {
+                new ParameterizedTypeReference<Response<com.cloudhubs.trainticket.preserve.entity.TravelResult>>() {
                 });
         Response r = re.getBody();
         if(r.getStatus() == 0){

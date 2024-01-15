@@ -1,15 +1,15 @@
 package com.cloudhubs.trainticket.preserve.service.impl;
 
-import edu.fudanselab.trainticket.entity.Route;
-import edu.fudanselab.trainticket.entity.RoutePlanResultUnit;
-import edu.fudanselab.trainticket.entity.TripResponse;
-import edu.fudanselab.trainticket.entity.Trip;
-import edu.fudanselab.trainticket.entity.TripInfo;
-import edu.fudanselab.trainticket.entity.RoutePlanInfo;
-import edu.fudanselab.trainticket.entity.TripAllDetail;
-import edu.fudanselab.trainticket.entity.TripAllDetailInfo;
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.util.StringUtils;
+import com.cloudhubs.trainticket.preserve.entity.Route;
+import com.cloudhubs.trainticket.preserve.entity.RoutePlanResultUnit;
+import com.cloudhubs.trainticket.preserve.entity.TripResponse;
+import com.cloudhubs.trainticket.preserve.entity.Trip;
+import com.cloudhubs.trainticket.preserve.entity.TripInfo;
+import com.cloudhubs.trainticket.preserve.entity.RoutePlanInfo;
+import com.cloudhubs.trainticket.preserve.entity.TripAllDetail;
+import com.cloudhubs.trainticket.preserve.entity.TripAllDetailInfo;
+import com.cloudhubs.trainticket.preserve.util.Response;
+import com.cloudhubs.trainticket.preserve.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +21,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import edu.fudanselab.trainticket.service.RoutePlanService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
+import com.cloudhubs.trainticket.preserve.service.RoutePlanService;
+import com.cloudhubs.trainticket.preserve.service.ServiceResolver;
 
 import java.util.ArrayList;
 import java.util.Date;

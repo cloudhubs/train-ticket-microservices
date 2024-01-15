@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.preserve.controller;
 
-import edu.fudanselab.trainticket.entity.Seat;
-import edu.fudanselab.trainticket.util.StringUtils;
-import edu.fudanselab.trainticket.entity.Order;
-import edu.fudanselab.trainticket.entity.OrderInfo;
-import edu.fudanselab.trainticket.service.OrderService;
+import com.cloudhubs.trainticket.preserve.entity.Seat;
+import com.cloudhubs.trainticket.preserve.util.StringUtils;
+import com.cloudhubs.trainticket.preserve.entity.Order;
+import com.cloudhubs.trainticket.preserve.entity.OrderInfo;
+import com.cloudhubs.trainticket.preserve.service.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
