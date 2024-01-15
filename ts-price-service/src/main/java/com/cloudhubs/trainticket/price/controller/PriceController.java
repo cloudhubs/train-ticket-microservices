@@ -8,8 +8,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.entity.PriceConfig;
-import edu.fudanselab.trainticket.service.PriceService;
+import com.cloudhubs.trainticket.price.entity.PriceConfig;
+import com.cloudhubs.trainticket.price.service.PriceService;
 
 import java.util.List;
 

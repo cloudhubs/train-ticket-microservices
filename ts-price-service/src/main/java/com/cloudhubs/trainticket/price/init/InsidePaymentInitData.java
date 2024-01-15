@@ -1,9 +1,9 @@
 package com.cloudhubs.trainticket.price.init;
 
-import edu.fudanselab.trainticket.entity.*;
-import edu.fudanselab.trainticket.repository.AddMoneyRepository;
-import edu.fudanselab.trainticket.repository.PaymentRepository;
-import edu.fudanselab.trainticket.service.InsidePaymentService;
+import com.cloudhubs.trainticket.price.entity.*;
+import com.cloudhubs.trainticket.price.repository.AddMoneyRepository;
+import com.cloudhubs.trainticket.price.repository.PaymentRepository;
+import com.cloudhubs.trainticket.price.service.InsidePaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
