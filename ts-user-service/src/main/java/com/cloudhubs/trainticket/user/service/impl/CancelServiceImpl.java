@@ -1,14 +1,14 @@
 package com.cloudhubs.trainticket.user.service.impl;
 
-import edu.fudanselab.trainticket.entity.CommonOrder;
-import edu.fudanselab.trainticket.entity.NotifyInfo;
-import edu.fudanselab.trainticket.entity.OrderStatus;
-import edu.fudanselab.trainticket.entity.User;
-import edu.fudanselab.trainticket.entity.SeatClass;
-import edu.fudanselab.trainticket.service.CancelService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.util.StringUtils;
+import com.cloudhubs.trainticket.user.entity.CommonOrder;
+import com.cloudhubs.trainticket.user.entity.NotifyInfo;
+import com.cloudhubs.trainticket.user.entity.OrderStatus;
+import com.cloudhubs.trainticket.user.entity.User;
+import com.cloudhubs.trainticket.user.entity.SeatClass;
+import com.cloudhubs.trainticket.user.service.CancelService;
+import com.cloudhubs.trainticket.user.service.ServiceResolver;
+import com.cloudhubs.trainticket.user.util.Response;
+import com.cloudhubs.trainticket.user.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

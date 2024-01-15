@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.user.controller;
 
-import edu.fudanselab.trainticket.service.CancelService;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.user.service.CancelService;
+import com.cloudhubs.trainticket.user.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

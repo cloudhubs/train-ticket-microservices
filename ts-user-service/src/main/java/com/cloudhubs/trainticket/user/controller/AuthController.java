@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.user.controller;
 
-import edu.fudanselab.trainticket.dto.AuthDto;
-import edu.fudanselab.trainticket.service.AuthUserService;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.user.dto.AuthDto;
+import com.cloudhubs.trainticket.user.service.AuthUserService;
+import com.cloudhubs.trainticket.user.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

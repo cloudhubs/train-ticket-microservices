@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.user.service;
 
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.user.util.Response;
 import org.springframework.http.HttpHeaders;
 
 /**
