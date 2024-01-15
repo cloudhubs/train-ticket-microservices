@@ -2,6 +2,9 @@ package com.cloudhubs.trainticket.route;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class TsRouteServiceApplication {
@@ -9,5 +12,10 @@ public class TsRouteServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(TsRouteServiceApplication.class, args);
     }
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder.build();
+    }
+
 
 }
