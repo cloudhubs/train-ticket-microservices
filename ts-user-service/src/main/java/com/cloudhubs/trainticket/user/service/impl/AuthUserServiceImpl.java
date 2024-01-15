@@ -33,8 +33,6 @@ public class AuthUserServiceImpl implements AuthUserService {
     @Autowired
     private AuthUserRepository authUserRepository;
 
-    @Autowired
-//    protected PasswordEncoder passwordEncoder;
 
     @Override
     public AuthUser saveUser(AuthUser user) {

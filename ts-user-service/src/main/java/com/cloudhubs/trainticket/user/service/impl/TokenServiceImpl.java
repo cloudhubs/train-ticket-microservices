@@ -40,8 +40,8 @@ public class TokenServiceImpl implements TokenService {
     @Autowired
     private AuthUserRepository authUserRepository;
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
+    //@Autowired
+    //private AuthenticationManager authenticationManager;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -53,6 +53,11 @@ public class TokenServiceImpl implements TokenService {
     private ServiceResolver serviceResolver;
 
     @Override
+    public Response getToken(BasicAuthDto dto, HttpHeaders headers) {
+        return null;
+    }
+
+    /*@Override
     public Response getToken(BasicAuthDto dto, HttpHeaders headers) throws UserOperationException {
         String username = dto.getUsername();
         String password = dto.getPassword();
@@ -91,5 +96,5 @@ public class TokenServiceImpl implements TokenService {
         String token = jwtProvider.createToken(authUser);
         LOGGER.info("[getToken][success][USER TOKEN: {} USER ID: {}]", token, authUser.getUserId());
         return new Response<>(1, "login success", new TokenDto(authUser.getUserId(), username, token));
-    }
+    }*/
 }
