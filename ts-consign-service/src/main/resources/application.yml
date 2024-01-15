@@ -1,8 +1,8 @@
 spring:
   application:
-    name: ts-admin-service
+    name: ts-consign-service
   datasource:
-    url: jdbc:mysql://localhost:3306/admin-service
+    url: jdbc:mysql://localhost:3306/consign-service?createDatabaseIfNotExist=true
     username: root
     password: admin@123#
     driver-class-name: com.mysql.cj.jdbc.Driver

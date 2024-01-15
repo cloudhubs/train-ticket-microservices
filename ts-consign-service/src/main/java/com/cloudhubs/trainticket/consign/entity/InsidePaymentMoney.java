@@ -2,10 +2,11 @@ package com.cloudhubs.trainticket.consign.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import  jakarta.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+/*import javax.persistence.*;
+*/
 
 /**
  * @author fdse
