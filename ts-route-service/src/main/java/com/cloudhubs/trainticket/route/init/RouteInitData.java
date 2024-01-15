@@ -3,8 +3,8 @@ package com.cloudhubs.trainticket.route.init;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import edu.fudanselab.trainticket.entity.RouteInfo;
-import edu.fudanselab.trainticket.service.RouteService;
+import com.cloudhubs.trainticket.route.entity.RouteInfo;
+import com.cloudhubs.trainticket.route.service.RouteService;
 
 /**
  * @author fdse

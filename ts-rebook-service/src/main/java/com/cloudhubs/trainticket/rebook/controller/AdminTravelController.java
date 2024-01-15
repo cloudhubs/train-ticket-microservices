@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.rebook.controller;
 
-import edu.fudanselab.trainticket.service.AdminTravelService;
-import edu.fudanselab.trainticket.entity.TravelInfo;
+import com.cloudhubs.trainticket.rebook.service.AdminTravelService;
+import com.cloudhubs.trainticket.rebook.entity.TravelInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

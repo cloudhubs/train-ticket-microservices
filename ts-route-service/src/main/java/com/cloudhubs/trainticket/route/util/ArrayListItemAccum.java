@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.route.util;/*
 
 
-package edu.fudanselab.trainticket.util;
+package com.cloudhubs.trainticket.route.util;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,9 @@
 package com.cloudhubs.trainticket.rebook.controller;
 
-import edu.fudanselab.trainticket.entity.TravelInfo;
-import edu.fudanselab.trainticket.entity.TripAllDetailInfo;
-import edu.fudanselab.trainticket.entity.TripInfo;
-import edu.fudanselab.trainticket.entity.TripResponse;
+import com.cloudhubs.trainticket.rebook.entity.TravelInfo;
+import com.cloudhubs.trainticket.rebook.entity.TripAllDetailInfo;
+import com.cloudhubs.trainticket.rebook.entity.TripInfo;
+import com.cloudhubs.trainticket.rebook.entity.TripResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.service.TravelService;
+import com.cloudhubs.trainticket.rebook.service.TravelService;
 
 import java.util.ArrayList;
 

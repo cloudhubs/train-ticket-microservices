@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.route.entity;
 
-import edu.fudanselab.trainticket.entity.Account;
+import com.cloudhubs.trainticket.route.entity.Account;
 import lombok.Data;
-import edu.fudanselab.trainticket.entity.Account;
+import com.cloudhubs.trainticket.route.entity.Account;
 
 /**
  * @author fdse

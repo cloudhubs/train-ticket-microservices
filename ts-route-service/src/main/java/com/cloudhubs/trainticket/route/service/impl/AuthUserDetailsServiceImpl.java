@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.route.service.impl;
 
-import edu.fudanselab.trainticket.constant.InfoConstant;
-import edu.fudanselab.trainticket.repository.AuthUserRepository;
+import com.cloudhubs.trainticket.route.constant.InfoConstant;
+import com.cloudhubs.trainticket.route.repository.AuthUserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

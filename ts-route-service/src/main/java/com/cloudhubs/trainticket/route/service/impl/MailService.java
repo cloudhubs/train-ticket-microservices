@@ -2,8 +2,8 @@ package com.cloudhubs.trainticket.route.service.impl;
 
 import javax.mail.internet.MimeMessage;
 
-import edu.fudanselab.trainticket.entity.Mail;
-import edu.fudanselab.trainticket.entity.Mail;
+import com.cloudhubs.trainticket.route.entity.Mail;
+import com.cloudhubs.trainticket.route.entity.Mail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.mail.javamail.JavaMailSender;

@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.rebook.entity;
 
-import edu.fudanselab.trainticket.entity.TripResponse;
+import com.cloudhubs.trainticket.rebook.entity.TripResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

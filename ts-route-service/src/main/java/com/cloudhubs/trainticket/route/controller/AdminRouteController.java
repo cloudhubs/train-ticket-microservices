@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.route.controller;
 
-import edu.fudanselab.trainticket.service.AdminRouteService;
-import edu.fudanselab.trainticket.entity.RouteInfoCommon;
+import com.cloudhubs.trainticket.route.service.AdminRouteService;
+import com.cloudhubs.trainticket.route.entity.RouteInfoCommon;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

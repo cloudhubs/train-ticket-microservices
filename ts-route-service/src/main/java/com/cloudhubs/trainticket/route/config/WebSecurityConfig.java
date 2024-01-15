@@ -1,7 +1,7 @@
 
 package com.cloudhubs.trainticket.route.config;
 
-import edu.fudanselab.trainticket.config.jwt.JWTFilter;
+import com.cloudhubs.trainticket.route.config.jwt.JWTFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

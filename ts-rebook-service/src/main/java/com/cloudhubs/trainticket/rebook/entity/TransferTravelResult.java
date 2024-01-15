@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.rebook.entity;
 
-import edu.fudanselab.trainticket.entity.TripResponse;
+import com.cloudhubs.trainticket.rebook.entity.TripResponse;
 import lombok.Data;
-import edu.fudanselab.trainticket.entity.TripResponse;
+import com.cloudhubs.trainticket.rebook.entity.TripResponse;
 
 import java.util.List;
 

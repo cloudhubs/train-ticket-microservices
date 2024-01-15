@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.entity.RebookInfo;
-import edu.fudanselab.trainticket.service.RebookService;
+import com.cloudhubs.trainticket.rebook.entity.RebookInfo;
+import com.cloudhubs.trainticket.rebook.service.RebookService;
 
 import static org.springframework.http.ResponseEntity.ok;
 

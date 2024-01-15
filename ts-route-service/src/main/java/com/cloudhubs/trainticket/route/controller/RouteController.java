@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.route.controller;
 
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.route.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,8 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.entity.RouteInfo;
-import edu.fudanselab.trainticket.service.RouteService;
+import com.cloudhubs.trainticket.route.entity.RouteInfo;
+import com.cloudhubs.trainticket.route.service.RouteService;
 
 import java.util.List;
 

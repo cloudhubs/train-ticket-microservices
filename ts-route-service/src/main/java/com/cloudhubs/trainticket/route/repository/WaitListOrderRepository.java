@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.route.repository;
 
 
-import edu.fudanselab.trainticket.entity.WaitListOrder;
+import com.cloudhubs.trainticket.route.entity.WaitListOrder;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

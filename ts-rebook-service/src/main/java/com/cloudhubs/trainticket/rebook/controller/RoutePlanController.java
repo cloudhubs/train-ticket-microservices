@@ -1,13 +1,13 @@
 package com.cloudhubs.trainticket.rebook.controller;
 
-import edu.fudanselab.trainticket.entity.RoutePlanInfo;
+import com.cloudhubs.trainticket.rebook.entity.RoutePlanInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.service.RoutePlanService;
+import com.cloudhubs.trainticket.rebook.service.RoutePlanService;
 
 import static org.springframework.http.ResponseEntity.ok;
 

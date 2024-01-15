@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.rebook.init;
 
-import edu.fudanselab.trainticket.entity.TravelInfo;
+import com.cloudhubs.trainticket.rebook.entity.TravelInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import edu.fudanselab.trainticket.service.TravelService;
+import com.cloudhubs.trainticket.rebook.service.TravelService;
 
 import java.util.Date;
 

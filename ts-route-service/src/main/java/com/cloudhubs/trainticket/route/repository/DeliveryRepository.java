@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.route.repository;
 
-import edu.fudanselab.trainticket.entity.Delivery;
+import com.cloudhubs.trainticket.route.entity.Delivery;
 import org.springframework.data.repository.CrudRepository;
 
 import org.springframework.scheduling.Trigger;

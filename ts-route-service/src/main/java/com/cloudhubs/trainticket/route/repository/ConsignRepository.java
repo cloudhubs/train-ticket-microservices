@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.route.repository;
 
-import edu.fudanselab.trainticket.entity.ConsignRecord;
+import com.cloudhubs.trainticket.route.entity.ConsignRecord;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
