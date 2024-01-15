@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.travel.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import edu.fudanselab.trainticket.entity.SeatClass;
-import edu.fudanselab.trainticket.util.StringUtils;
+import com.cloudhubs.trainticket.travel.entity.SeatClass;
+import com.cloudhubs.trainticket.travel.util.StringUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

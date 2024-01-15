@@ -1,11 +1,11 @@
 package com.cloudhubs.trainticket.travel.init;
 
-import edu.fudanselab.trainticket.entity.OrderStatus;
-import edu.fudanselab.trainticket.util.StringUtils;
-import org.apache.tomcat.jni.Time;
-import edu.fudanselab.trainticket.entity.Order;
-import edu.fudanselab.trainticket.entity.SeatClass;
-import edu.fudanselab.trainticket.service.OrderOtherService;
+import com.cloudhubs.trainticket.travel.entity.OrderStatus;
+import com.cloudhubs.trainticket.travel.util.StringUtils;
+//import org.apache.tomcat.jni.Time;
+import com.cloudhubs.trainticket.travel.entity.Order;
+import com.cloudhubs.trainticket.travel.entity.SeatClass;
+import com.cloudhubs.trainticket.travel.service.OrderOtherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

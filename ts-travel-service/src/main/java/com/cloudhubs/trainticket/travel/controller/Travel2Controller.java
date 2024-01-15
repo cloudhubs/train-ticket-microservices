@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.travel.controller;
 
-import edu.fudanselab.trainticket.entity.TripResponse;
+import com.cloudhubs.trainticket.travel.entity.TripResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.service.TravelService2;
+import com.cloudhubs.trainticket.travel.service.TravelService2;
 
 import java.util.ArrayList;
 
@@ -58,7 +58,7 @@ public class Travel2Controller {
 
     @CrossOrigin(origins = "*")
     @PostMapping(value = "/trips")
-    public HttpEntity<?> createTrip(@RequestBody edu.fudanselab.trainticket.entity.TravelInfo routeIds, @RequestHeader HttpHeaders headers) {
+    public HttpEntity<?> createTrip(@RequestBody com.cloudhubs.trainticket.travel.entity.TravelInfo routeIds, @RequestHeader HttpHeaders headers) {
         // null
         Travel2Controller.LOGGER.info("[create][Create trip][TripId: {}]", routeIds.getTripId());
         return new ResponseEntity<>(service.create(routeIds, headers), HttpStatus.CREATED);
@@ -81,7 +81,7 @@ public class Travel2Controller {
 
     @CrossOrigin(origins = "*")
     @PutMapping(value = "/trips")
-    public HttpEntity updateTrip(@RequestBody edu.fudanselab.trainticket.entity.TravelInfo info, @RequestHeader HttpHeaders headers) {
+    public HttpEntity updateTrip(@RequestBody com.cloudhubs.trainticket.travel.entity.TravelInfo info, @RequestHeader HttpHeaders headers) {
         // Trip
         Travel2Controller.LOGGER.info("[update][Update trip][TripId: {}]",info.getTripId());
         return ok(service.update(info, headers));
@@ -104,7 +104,7 @@ public class Travel2Controller {
      */
     @CrossOrigin(origins = "*")
     @PostMapping(value = "/trips/left")
-    public HttpEntity queryInfo(@RequestBody edu.fudanselab.trainticket.entity.TripInfo info, @RequestHeader HttpHeaders headers) {
+    public HttpEntity queryInfo(@RequestBody com.cloudhubs.trainticket.travel.entity.TripInfo info, @RequestHeader HttpHeaders headers) {
         if (info.getStartPlace() == null || info.getStartPlace().length() == 0 ||
                 info.getEndPlace() == null || info.getEndPlace().length() == 0 ||
                 info.getDepartureTime() == null) {
@@ -125,7 +125,7 @@ public class Travel2Controller {
      */
     @CrossOrigin(origins = "*")
     @PostMapping(value = "/trip_detail")
-    public HttpEntity getTripAllDetailInfo(@RequestBody edu.fudanselab.trainticket.entity.TripAllDetailInfo gtdi, @RequestHeader HttpHeaders headers) {
+    public HttpEntity getTripAllDetailInfo(@RequestBody com.cloudhubs.trainticket.travel.entity.TripAllDetailInfo gtdi, @RequestHeader HttpHeaders headers) {
         Travel2Controller.LOGGER.info("[getTripAllDetailInfo][Get trip detail][TripId: {}]",gtdi.getTripId());
         return ok(service.getTripAllDetailInfo(gtdi, headers));
     }

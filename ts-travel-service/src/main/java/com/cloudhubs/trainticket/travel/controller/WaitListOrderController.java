@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.entity.WaitListOrderVO;
-import edu.fudanselab.trainticket.service.WaitListOrderService;
+import com.cloudhubs.trainticket.travel.entity.WaitListOrderVO;
+import com.cloudhubs.trainticket.travel.service.WaitListOrderService;
 
 import static org.springframework.http.ResponseEntity.ok;
 

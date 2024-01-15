@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.travel.entity;
 
-import edu.fudanselab.trainticket.util.StringUtils;
+import com.cloudhubs.trainticket.travel.util.StringUtils;
 import lombok.Data;
 import lombok.ToString;
 

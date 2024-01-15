@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.travel.entity;
 
-import edu.fudanselab.trainticket.util.StringUtils;
+import com.cloudhubs.trainticket.travel.util.StringUtils;
 import lombok.Data;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import java.util.Date;
 
 /**

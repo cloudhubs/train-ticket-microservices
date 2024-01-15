@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.travel.init;
 
-import edu.fudanselab.trainticket.util.StringUtils;
-import edu.fudanselab.trainticket.entity.Order;
-import edu.fudanselab.trainticket.service.OrderService;
+import com.cloudhubs.trainticket.travel.util.StringUtils;
+import com.cloudhubs.trainticket.travel.entity.Order;
+import com.cloudhubs.trainticket.travel.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

@@ -1,13 +1,13 @@
 package com.cloudhubs.trainticket.travel.controller;
 
-import edu.fudanselab.trainticket.entity.Seat;
+import com.cloudhubs.trainticket.travel.entity.Seat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.service.SeatService;
+import com.cloudhubs.trainticket.travel.service.SeatService;
 
 import static org.springframework.http.ResponseEntity.ok;
 

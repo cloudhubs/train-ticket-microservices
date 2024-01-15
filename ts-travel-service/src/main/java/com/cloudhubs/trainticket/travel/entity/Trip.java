@@ -1,13 +1,13 @@
 package com.cloudhubs.trainticket.travel.entity;
 
-import edu.fudanselab.trainticket.entity.TripId;
-import edu.fudanselab.trainticket.util.StringUtils;
+import com.cloudhubs.trainticket.travel.entity.TripId;
+import com.cloudhubs.trainticket.travel.util.StringUtils;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import jakarta.persistence.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import java.util.Date;
 
 /**

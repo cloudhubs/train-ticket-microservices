@@ -12,7 +12,7 @@ public class TsStationServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(TsStationServiceApplication.class, args);
     }
-    
+
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
