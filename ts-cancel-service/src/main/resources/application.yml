@@ -1,24 +1,22 @@
+server:
+  port: 8891
 spring:
   application:
     name: ts-cancel-service
-  datasource:
-    url: jdbc:mysql://localhost:3306/cancel-service?createDatabaseIfNotExist=true
-    username: root
-    password: admin@123#
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-
   cloud:
     consul:
+      config:
+        enabled: false
       discovery:
         instance-id: ${spring.application.name}-${server.port}-${random.int[1,99]}
         prefer-ip-address: true
-      config:
-        enabled: false
       host: localhost
       port: 8500
-
-server:
-  port: 9002
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: admin@123#
+    url: jdbc:mysql://localhost:3306/ts-cancel-service?createDatabaseIfNotExist=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update

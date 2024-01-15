@@ -1,22 +1,22 @@
 server:
-  port: 8888
+  port: 8897
 spring:
   application:
-    name: gateway-service
+    name: ts-new-gateway
   cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: test-service
-          uri: lb://test-service
-          predicates:
-              - Path=/user/**
     consul:
       config:
         enabled: false
+      discovery:
+        instance-id: ${spring.application.name}-${server.port}-${random.int[1,99]}
+        prefer-ip-address: true
       host: localhost
       port: 8500
-
-
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: admin@123#
+    url: jdbc:mysql://localhost:3306/ts-new-gateway?createDatabaseIfNotExist=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update

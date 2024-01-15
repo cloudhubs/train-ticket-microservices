@@ -1,24 +1,22 @@
+server:
+  port: 8895
 spring:
   application:
     name: ts-delivery-service
-  datasource:
-    url: jdbc:mysql://localhost:3306/delivery-service?createDatabaseIfNotExist=true
-    username: root
-    password: admin@123#
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-
   cloud:
     consul:
+      config:
+        enabled: false
       discovery:
         instance-id: ${spring.application.name}-${server.port}-${random.int[1,99]}
         prefer-ip-address: true
-      config:
-        enabled: false
       host: localhost
       port: 8500
-
-server:
-  port: 8897
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: admin@123#
+    url: jdbc:mysql://localhost:3306/ts-delivery-service?createDatabaseIfNotExist=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
