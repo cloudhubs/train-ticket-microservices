@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.station.util;
 
-import edu.fudanselab.trainticket.entity.Contacts;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.station.entity.Contacts;
+import com.cloudhubs.trainticket.station.util.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
@@ -10,10 +10,10 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-import edu.fudanselab.trainticket.entity.WaitListOrderStatus;
-import edu.fudanselab.trainticket.entity.WaitListOrderVO;
-import edu.fudanselab.trainticket.service.ServiceResolver;
-import edu.fudanselab.trainticket.service.WaitListOrderService;
+import com.cloudhubs.trainticket.station.entity.WaitListOrderStatus;
+import com.cloudhubs.trainticket.station.entity.WaitListOrderVO;
+import com.cloudhubs.trainticket.station.service.ServiceResolver;
+import com.cloudhubs.trainticket.station.service.WaitListOrderService;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;

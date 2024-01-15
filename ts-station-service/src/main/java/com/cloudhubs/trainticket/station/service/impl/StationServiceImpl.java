@@ -1,14 +1,14 @@
 package com.cloudhubs.trainticket.station.service.impl;
 
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.entity.Station;
-import edu.fudanselab.trainticket.repository.StationRepository;
+import com.cloudhubs.trainticket.station.util.Response;
+import com.cloudhubs.trainticket.station.entity.Station;
+import com.cloudhubs.trainticket.station.repository.StationRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
-import edu.fudanselab.trainticket.service.StationService;
+import com.cloudhubs.trainticket.station.service.StationService;
 
 import java.util.*;
 

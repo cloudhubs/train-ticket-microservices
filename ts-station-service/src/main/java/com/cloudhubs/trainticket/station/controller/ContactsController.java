@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.station.controller;
 
-import edu.fudanselab.trainticket.entity.Contacts;
-import edu.fudanselab.trainticket.service.ContactsService;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.station.entity.Contacts;
+import com.cloudhubs.trainticket.station.service.ContactsService;
+import com.cloudhubs.trainticket.station.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

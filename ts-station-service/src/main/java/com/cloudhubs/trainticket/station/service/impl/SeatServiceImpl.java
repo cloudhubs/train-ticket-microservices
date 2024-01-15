@@ -1,14 +1,14 @@
 package com.cloudhubs.trainticket.station.service.impl;
 
-import edu.fudanselab.trainticket.entity.Seat;
-import edu.fudanselab.trainticket.entity.Route;
-import edu.fudanselab.trainticket.entity.LeftTicketInfo;
-import edu.fudanselab.trainticket.entity.TrainType;
-import edu.fudanselab.trainticket.entity.Ticket;
-import edu.fudanselab.trainticket.entity.Config;
+import com.cloudhubs.trainticket.station.entity.Seat;
+import com.cloudhubs.trainticket.station.entity.Route;
+import com.cloudhubs.trainticket.station.entity.LeftTicketInfo;
+import com.cloudhubs.trainticket.station.entity.TrainType;
+import com.cloudhubs.trainticket.station.entity.Ticket;
+import com.cloudhubs.trainticket.station.entity.Config;
 
 
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.station.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +20,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import edu.fudanselab.trainticket.service.SeatService;
-import edu.fudanselab.trainticket.service.ServiceResolver;
+import com.cloudhubs.trainticket.station.service.SeatService;
+import com.cloudhubs.trainticket.station.service.ServiceResolver;
 
 import java.util.List;
 import java.util.Random;

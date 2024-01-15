@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.station.service;
 
-import edu.fudanselab.trainticket.entity.Contacts;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.station.entity.Contacts;
+import com.cloudhubs.trainticket.station.util.Response;
 import org.springframework.http.HttpHeaders;
 
 import java.util.UUID;

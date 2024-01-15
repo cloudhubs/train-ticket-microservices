@@ -1,11 +1,11 @@
 package com.cloudhubs.trainticket.station.service;
 
-import edu.fudanselab.trainticket.entity.Contacts;
-import edu.fudanselab.trainticket.entity.TrainType;
-import edu.fudanselab.trainticket.entity.PriceInfo;
-import edu.fudanselab.trainticket.entity.Station;
-import edu.fudanselab.trainticket.entity.Config;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.station.entity.Contacts;
+import com.cloudhubs.trainticket.station.entity.TrainType;
+import com.cloudhubs.trainticket.station.entity.PriceInfo;
+import com.cloudhubs.trainticket.station.entity.Station;
+import com.cloudhubs.trainticket.station.entity.Config;
+import com.cloudhubs.trainticket.station.util.Response;
 import org.springframework.http.HttpHeaders;
 
 

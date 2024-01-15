@@ -1,14 +1,14 @@
 package com.cloudhubs.trainticket.station.service.impl;
 
-import edu.fudanselab.trainticket.entity.Contacts;
-import edu.fudanselab.trainticket.service.ContactsService;
-import edu.fudanselab.trainticket.util.Response;
+import com.cloudhubs.trainticket.station.entity.Contacts;
+import com.cloudhubs.trainticket.station.service.ContactsService;
+import com.cloudhubs.trainticket.station.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
-import edu.fudanselab.trainticket.repository.ContactsRepository;
+import com.cloudhubs.trainticket.station.repository.ContactsRepository;
 
 import java.util.ArrayList;
 import java.util.UUID;
