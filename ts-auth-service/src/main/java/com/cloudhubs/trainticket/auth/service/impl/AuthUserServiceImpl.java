@@ -6,7 +6,6 @@ import com.cloudhubs.trainticket.auth.dto.AuthDto;
 import com.cloudhubs.trainticket.auth.entity.AuthUser;
 import com.cloudhubs.trainticket.auth.exception.UserOperationException;
 import com.cloudhubs.trainticket.auth.repository.AuthUserRepository;
-import com.cloudhubs.trainticket.auth.repository.UserRepository;
 import com.cloudhubs.trainticket.auth.service.AuthUserService;
 import com.cloudhubs.trainticket.auth.util.Response;
 import org.slf4j.Logger;

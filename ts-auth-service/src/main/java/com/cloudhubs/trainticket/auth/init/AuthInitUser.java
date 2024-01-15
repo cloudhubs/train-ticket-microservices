@@ -1,12 +1,9 @@
 package com.cloudhubs.trainticket.auth.init;
 
 import com.cloudhubs.trainticket.auth.entity.AuthUser;
-import com.cloudhubs.trainticket.auth.entity.User;
 import com.cloudhubs.trainticket.auth.repository.AuthUserRepository;
-import com.cloudhubs.trainticket.auth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
