@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.config.repository;
 
-import edu.fudanselab.trainticket.entity.User;
+import com.cloudhubs.trainticket.config.entity.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

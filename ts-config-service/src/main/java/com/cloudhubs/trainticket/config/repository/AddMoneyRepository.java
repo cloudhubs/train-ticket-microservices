@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.config.repository;
 
-import edu.fudanselab.trainticket.entity.Money;
+import com.cloudhubs.trainticket.config.entity.Money;
 import org.springframework.data.repository.CrudRepository;
 
 /**

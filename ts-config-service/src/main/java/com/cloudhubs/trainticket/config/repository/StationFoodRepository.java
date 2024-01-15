@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.config.repository;
 
-import edu.fudanselab.trainticket.entity.StationFoodStore;
+import com.cloudhubs.trainticket.config.entity.StationFoodStore;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

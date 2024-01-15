@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.config.config;/*
 
-package edu.fudanselab.trainticket.config;
+package com.cloudhubs.trainticket.config.config;
 
-import edu.fudanselab.trainticket.config.jwt.JWTFilter;
+import com.cloudhubs.trainticket.config.config.jwt.JWTFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

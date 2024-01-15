@@ -18,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableAsync
 //@IntegrationComponentScan
-@EnableJpaRepositories("edu.fudanselab.trainticket.repository")
+@EnableJpaRepositories("com.cloudhubs.trainticket.config.repository")
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class TrainTicketApplication {
 

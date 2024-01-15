@@ -1,14 +1,14 @@
 spring:
   application:
-    name: ts-cancel-service
+    name: ts-travel-service
   datasource:
-    url: jdbc:mysql://localhost:3306/cancel-service
+    url: jdbc:mysql://localhost:3306/travel-service?createDatabaseIfNotExist=true
     username: root
     password: admin@123#
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 
   cloud:
     consul:
@@ -21,4 +21,4 @@ spring:
       port: 8500
 
 server:
-  port: 8893
+  port: 9002

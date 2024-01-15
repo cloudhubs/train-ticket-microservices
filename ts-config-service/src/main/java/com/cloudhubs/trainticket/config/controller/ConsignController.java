@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.config.controller;
 
-import edu.fudanselab.trainticket.entity.Consign;
-import edu.fudanselab.trainticket.service.ConsignService;
+import com.cloudhubs.trainticket.config.entity.Consign;
+import com.cloudhubs.trainticket.config.service.ConsignService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

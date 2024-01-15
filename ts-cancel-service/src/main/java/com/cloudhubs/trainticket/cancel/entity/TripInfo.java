@@ -4,8 +4,8 @@ import com.cloudhubs.trainticket.cancel.util.StringUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * @author fdse

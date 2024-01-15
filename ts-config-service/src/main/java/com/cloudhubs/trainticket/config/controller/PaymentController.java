@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.config.controller;
 
-import edu.fudanselab.trainticket.entity.Payment;
-import edu.fudanselab.trainticket.service.PaymentService;
+import com.cloudhubs.trainticket.config.entity.Payment;
+import com.cloudhubs.trainticket.config.service.PaymentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.service.VerifyCodeService;
+import com.cloudhubs.trainticket.config.service.VerifyCodeService;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;

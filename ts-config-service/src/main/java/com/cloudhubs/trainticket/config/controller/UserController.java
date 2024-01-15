@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.config.controller;
 
-import edu.fudanselab.trainticket.util.Response;
-import edu.fudanselab.trainticket.service.UserService;
+import com.cloudhubs.trainticket.config.util.Response;
+import com.cloudhubs.trainticket.config.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import edu.fudanselab.trainticket.dto.UserDto;
+import com.cloudhubs.trainticket.config.dto.UserDto;
 //import user.service.UserService;
 
 import static org.springframework.http.ResponseEntity.ok;
