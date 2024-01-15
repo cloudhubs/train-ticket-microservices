@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.orderrelated.init;
 
-import edu.fudanselab.trainticket.entity.ConsignPrice;
-import edu.fudanselab.trainticket.service.ConsignPriceService;
+import com.cloudhubs.trainticket.orderrelated.entity.ConsignPrice;
+import com.cloudhubs.trainticket.orderrelated.service.ConsignPriceService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

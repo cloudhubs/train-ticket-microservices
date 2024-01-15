@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.orderrelated.repository;
 
-import edu.fudanselab.trainticket.entity.PriceConfig;
+import com.cloudhubs.trainticket.orderrelated.entity.PriceConfig;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +11,7 @@ import java.util.Optional;
  * @author fdse
  */
 @Repository
-public interface PriceConfigRepository extends CrudRepository<PriceConfig, String> {
+public interface PriceConfigRepository extends JpaRepository<PriceConfig, String> {
 
     @Override
     Optional<PriceConfig> findById(String id);

@@ -1,10 +1,10 @@
 package com.cloudhubs.trainticket.orderrelated.repository;
 
-import edu.fudanselab.trainticket.entity.Assurance;
-import org.springframework.data.repository.CrudRepository;
+import com.cloudhubs.trainticket.orderrelated.entity.Assurance;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.UUID;
@@ -13,7 +13,7 @@ import java.util.UUID;
  * @author fdse
  */
 @Repository
-public interface AssuranceRepository  extends CrudRepository<Assurance, String> {
+public interface AssuranceRepository  extends JpaRepository<Assurance, String> {
 
     /**
      * find by id

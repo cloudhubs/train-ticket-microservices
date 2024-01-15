@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.orderrelated.repository;
 
 
-import edu.fudanselab.trainticket.entity.SecurityConfig;
-import org.springframework.data.repository.CrudRepository;
+import com.cloudhubs.trainticket.orderrelated.entity.SecurityConfig;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -11,7 +11,7 @@ import java.util.Optional;
  * @author fdse
  */
 @Repository
-public interface SecurityRepository extends CrudRepository<SecurityConfig,String> {
+public interface SecurityRepository extends JpaRepository<SecurityConfig,String> {
 
 
     SecurityConfig findByName(String name);

@@ -3,8 +3,8 @@ package com.cloudhubs.trainticket.orderrelated.init;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import edu.fudanselab.trainticket.entity.PriceConfig;
-import edu.fudanselab.trainticket.service.PriceService;
+import com.cloudhubs.trainticket.orderrelated.entity.PriceConfig;
+import com.cloudhubs.trainticket.orderrelated.service.PriceService;
 
 import java.util.UUID;
 

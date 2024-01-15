@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-import edu.fudanselab.trainticket.entity.User;
-import edu.fudanselab.trainticket.repository.UserRepository;
-import edu.fudanselab.trainticket.service.UserService;
+import com.cloudhubs.trainticket.orderrelated.entity.User;
+import com.cloudhubs.trainticket.orderrelated.repository.UserRepository;
+import com.cloudhubs.trainticket.orderrelated.service.UserService;
 
 
 import java.util.UUID;
