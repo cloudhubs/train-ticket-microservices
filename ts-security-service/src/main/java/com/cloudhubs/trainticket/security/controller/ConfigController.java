@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.security.controller;
 
-import edu.fudanselab.trainticket.entity.Config;
-import edu.fudanselab.trainticket.service.ConfigService;
+import com.cloudhubs.trainticket.security.entity.Config;
+import com.cloudhubs.trainticket.security.service.ConfigService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.security.repository;
 
-import edu.fudanselab.trainticket.entity.Config;
+import com.cloudhubs.trainticket.security.entity.Config;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

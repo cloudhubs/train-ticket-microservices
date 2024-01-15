@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import edu.fudanselab.trainticket.entity.TrainType;
-import edu.fudanselab.trainticket.repository.TrainTypeRepository;
-import edu.fudanselab.trainticket.service.TrainService;
+import com.cloudhubs.trainticket.security.entity.TrainType;
+import com.cloudhubs.trainticket.security.repository.TrainTypeRepository;
+import com.cloudhubs.trainticket.security.service.TrainService;
 import java.util.List;
 
 @Service

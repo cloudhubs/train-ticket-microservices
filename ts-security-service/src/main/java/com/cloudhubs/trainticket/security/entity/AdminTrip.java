@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.security.entity;
 
-import edu.fudanselab.trainticket.entity.Route;
-import edu.fudanselab.trainticket.entity.TrainType;
+import com.cloudhubs.trainticket.security.entity.Route;
+import com.cloudhubs.trainticket.security.entity.TrainType;
 import lombok.Data;
 
 /**

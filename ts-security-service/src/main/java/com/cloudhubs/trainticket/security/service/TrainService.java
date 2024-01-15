@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.security.service;
 
 import org.springframework.http.HttpHeaders;
-import edu.fudanselab.trainticket.entity.TrainType;
+import com.cloudhubs.trainticket.security.entity.TrainType;
 
 import java.util.List;
 
