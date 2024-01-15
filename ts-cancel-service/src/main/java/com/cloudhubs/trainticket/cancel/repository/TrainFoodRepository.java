@@ -5,12 +5,13 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
 public interface TrainFoodRepository extends CrudRepository<TrainFood, String> {
 
-    TrainFood findById(UUID id);
+    Optional<TrainFood> findById(String id);
 
     @Override
     List<TrainFood> findAll();
@@ -18,5 +19,5 @@ public interface TrainFoodRepository extends CrudRepository<TrainFood, String> {
 
     TrainFood findByTripId(String tripId);
 
-    void deleteById(UUID id);
+    void deleteById(String id);
 }

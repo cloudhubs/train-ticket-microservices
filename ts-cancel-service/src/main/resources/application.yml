@@ -1,8 +1,8 @@
 spring:
   application:
-    name: ts-travel-service
+    name: ts-cancel-service
   datasource:
-    url: jdbc:mysql://localhost:3306/travel-service?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/cancel-service?createDatabaseIfNotExist=true
     username: root
     password: admin@123#
     driver-class-name: com.mysql.cj.jdbc.Driver

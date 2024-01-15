@@ -43,7 +43,7 @@ public interface FoodOrderRepository extends JpaRepository<FoodOrder, String> {
     @Override
     List<FoodOrder> findAll();
 
-    void deleteById(UUID id);
+    void deleteById(String id);
 
     void deleteFoodOrderByOrderId(String id);
 
