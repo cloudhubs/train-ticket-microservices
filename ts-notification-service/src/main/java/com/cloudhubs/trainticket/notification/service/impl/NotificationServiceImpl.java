@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.notification.service.impl;
 
-import edu.fudanselab.trainticket.entity.Mail;
-import edu.fudanselab.trainticket.entity.NotifyInfo;
-import edu.fudanselab.trainticket.service.NotificationService;
+import com.cloudhubs.trainticket.notification.entity.Mail;
+import com.cloudhubs.trainticket.notification.entity.NotifyInfo;
+import com.cloudhubs.trainticket.notification.service.NotificationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +19,11 @@ import java.util.Map;
 @Service
 public class NotificationServiceImpl implements NotificationService {
 
-    @Autowired
-    private JavaMailSender mailSender;
-
-    @Autowired
-    MailService mailService;
+//    @Autowired
+//    private JavaMailSender mailSender;
+//
+//    @Autowired
+//    MailService mailService;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(NotificationServiceImpl.class);
 
@@ -54,7 +54,7 @@ public class NotificationServiceImpl implements NotificationService {
         mail.setModel(model);
 
         try {
-            mailService.sendEmail(mail,"preserve_success.ftl");
+//            mailService.sendEmail(mail,"preserve_success.ftl");
             return true;
         } catch (Exception e) {
             LOGGER.error("[preserveSuccess][mailService.sendEmai][Exception: {}]", e.getMessage());
@@ -81,7 +81,7 @@ public class NotificationServiceImpl implements NotificationService {
         mail.setModel(model);
 
         try {
-            mailService.sendEmail(mail,"order_create_success.ftl");
+//            mailService.sendEmail(mail,"order_create_success.ftl");
             return true;
         } catch (Exception e) {
             LOGGER.error("[orderCreateSuccess][mailService.sendEmai][Exception: {}]", e.getMessage());
@@ -108,7 +108,7 @@ public class NotificationServiceImpl implements NotificationService {
         mail.setModel(model);
 
         try {
-            mailService.sendEmail(mail,"order_changed_success.ftl");
+//            mailService.sendEmail(mail,"order_changed_success.ftl");
             return true;
         } catch (Exception e) {
             LOGGER.error("[orderChangedSuccess][mailService.sendEmai][Exception: {}]", e.getMessage());
@@ -129,7 +129,7 @@ public class NotificationServiceImpl implements NotificationService {
         mail.setModel(model);
 
         try {
-            mailService.sendEmail(mail,"order_cancel_success.ftl");
+//            mailService.sendEmail(mail,"order_cancel_success.ftl");
             return true;
         } catch (Exception e) {
             LOGGER.error("[orderCancelSuccess][mailService.sendEmai][Exception: {}]", e.getMessage());

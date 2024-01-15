@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.notification.controller;
 
-import edu.fudanselab.trainticket.entity.Travel;
-import edu.fudanselab.trainticket.service.BasicService;
+import com.cloudhubs.trainticket.notification.entity.Travel;
+import com.cloudhubs.trainticket.notification.service.BasicService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.notification.controller;
 
-import edu.fudanselab.trainticket.entity.NotifyInfo;
-import edu.fudanselab.trainticket.mq.RabbitSend;
-import edu.fudanselab.trainticket.service.NotificationService;
+import com.cloudhubs.trainticket.notification.entity.NotifyInfo;
+import com.cloudhubs.trainticket.notification.mq.RabbitSend;
+import com.cloudhubs.trainticket.notification.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;

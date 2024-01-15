@@ -1,11 +1,11 @@
 package com.cloudhubs.trainticket.notification.mq;
 
-import edu.fudanselab.trainticket.util.JsonUtils;
-import edu.fudanselab.trainticket.config.Queues;
-import edu.fudanselab.trainticket.entity.Mail;
-import edu.fudanselab.trainticket.entity.NotifyInfo;
-import edu.fudanselab.trainticket.repository.NotifyRepository;
-import edu.fudanselab.trainticket.service.impl.MailService;
+import com.cloudhubs.trainticket.notification.util.JsonUtils;
+import com.cloudhubs.trainticket.notification.config.Queues;
+import com.cloudhubs.trainticket.notification.entity.Mail;
+import com.cloudhubs.trainticket.notification.entity.NotifyInfo;
+import com.cloudhubs.trainticket.notification.repository.NotifyRepository;
+//import com.cloudhubs.trainticket.notification.service.impl.MailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -23,8 +23,8 @@ public class RabbitReceive {
 
     private static final Logger logger = LoggerFactory.getLogger(RabbitReceive.class);
 
-    @Autowired
-    MailService mailService;
+//    @Autowired
+//    MailService mailService;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -71,7 +71,7 @@ public class RabbitReceive {
         mail.setModel(model);
 
         try {
-            mailService.sendEmail(mail, "preserve_success.ftl");
+//            mailService.sendEmail(mail, "preserve_success.ftl");
             logger.info("[process][Send email to user {} success]", username);
             info.setSendStatus(true);
         } catch (Exception e) {

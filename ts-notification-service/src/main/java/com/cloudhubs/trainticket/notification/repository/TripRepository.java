@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.notification.repository;
 
-import edu.fudanselab.trainticket.entity.Trip;
-import edu.fudanselab.trainticket.entity.TripId;
+import com.cloudhubs.trainticket.notification.entity.Trip;
+import com.cloudhubs.trainticket.notification.entity.TripId;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

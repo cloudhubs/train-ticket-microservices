@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.notification.service;
 
-import edu.fudanselab.trainticket.entity.NotifyInfo;
+import com.cloudhubs.trainticket.notification.entity.NotifyInfo;
 import org.springframework.http.HttpHeaders;
 
 /**

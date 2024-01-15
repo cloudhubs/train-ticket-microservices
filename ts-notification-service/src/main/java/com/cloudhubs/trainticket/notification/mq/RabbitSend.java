@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import edu.fudanselab.trainticket.config.Queues;
+import com.cloudhubs.trainticket.notification.config.Queues;
 
 @Component
 public class RabbitSend {
