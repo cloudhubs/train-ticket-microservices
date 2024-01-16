@@ -1,22 +1,120 @@
 server:
-  port: 8897
+  port: 8888
 spring:
   application:
-    name: ts-new-gateway
+    name: gateway-service
   cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: ts-admin-service
+          uri: lb://ts-admin-service
+          predicates:
+              - Path=/api/v1/**
+
+        - id: ts-assurance-service
+          uri: lb://ts-assurance-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-auth-service
+          uri: lb://ts-auth-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-cancel-service
+          uri: lb://ts-cancel-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-config-service
+          uri: lb://ts-config-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-consign-service
+          uri: lb://ts-consign-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-contacts-service
+          uri: lb://ts-contacts-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-delivery-service
+          uri: lb://ts-delivery-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-food-service
+          uri: lb://ts-food-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-new-gateway
+          uri: lb://ts-new-gateway
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-notification-service
+          uri: lb://ts-notification-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-order-related-service
+          uri: lb://ts-order-related-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-order-service
+          uri: lb://ts-order-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-preserve-service
+          uri: lb://ts-preserve-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-price-service
+          uri: lb://ts-price-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-rebook-service
+          uri: lb://ts-rebook-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-route-service
+          uri: lb://ts-route-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-security-service
+          uri: lb://ts-security-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-station-service
+          uri: lb://ts-station-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-travel-service
+          uri: lb://ts-travel-service
+          predicates:
+            - Path=/api/v1/**
+
+        - id: ts-user-service
+          uri: lb://ts-user-service
+          predicates:
+            - Path=/api/v1/**
     consul:
       config:
         enabled: false
-      discovery:
-        instance-id: ${spring.application.name}-${server.port}-${random.int[1,99]}
-        prefer-ip-address: true
       host: localhost
       port: 8500
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    password: admin@123#
-    url: jdbc:mysql://localhost:3306/ts-new-gateway?createDatabaseIfNotExist=true
-    username: root
-  jpa:
-    hibernate:
-      ddl-auto: update
