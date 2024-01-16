@@ -1,8 +1,8 @@
 package com.cloudhubs.trainticket.order.service;
 
-import com.cloudhubs.trainticket.order.common.util.Response;
+import com.cloudhubs.trainticket.order.util.Response;
 import org.springframework.http.HttpHeaders;
-import com.cloudhubs.trainticket.order.common.entity.OrderTicketsInfo;
+import com.cloudhubs.trainticket.order.entity.OrderTicketsInfo;
 
 /**
  * @author fdse
