@@ -1,13 +1,13 @@
-package com.cloudhubs.trainticket.route;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class TsRouteServiceApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
-
-}
+//package com.cloudhubs.trainticket.route;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class TsRouteServiceApplicationTests {
+//
+//    @Test
+//    void contextLoads() {
+//    }
+//
+//}

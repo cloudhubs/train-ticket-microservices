@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.order.service.impl;
 
-import edu.fudanselab.trainticket.service.ServiceResolver;
+import com.cloudhubs.trainticket.order.service.ServiceResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;

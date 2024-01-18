@@ -1,15 +1,14 @@
-/*
-package com.cloudhubs.trainticket.order.orderservice.service;
+package com.cloudhubs.trainticket.order.service;
 
 import com.cloudhubs.trainticket.order.entity.TransferTravelInfo;
 import com.cloudhubs.trainticket.order.entity.TripInfo;
 import com.cloudhubs.trainticket.order.util.Response;
 import org.springframework.http.HttpHeaders;
 
-*/
+
 /**
  * @author fdse
- *//*
+ */
 
 public interface TravelPlanService {
 
@@ -22,4 +21,4 @@ public interface TravelPlanService {
     Response getMinStation(TripInfo info, HttpHeaders headers);
 
 }
-*/
+

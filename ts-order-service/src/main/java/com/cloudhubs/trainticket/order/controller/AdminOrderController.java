@@ -1,7 +1,7 @@
 package com.cloudhubs.trainticket.order.controller;
 
-import com.cloudhubs.trainticket.order.adminorder.service.AdminOrderService;
-import com.cloudhubs.trainticket.order.common.entity.Order;
+import com.cloudhubs.trainticket.order.entity.Order;
+import com.cloudhubs.trainticket.order.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

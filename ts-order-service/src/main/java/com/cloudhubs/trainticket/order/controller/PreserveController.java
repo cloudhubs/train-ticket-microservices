@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.order.controller;
 
-import com.cloudhubs.trainticket.order.common.entity.OrderTicketsInfo;
+import com.cloudhubs.trainticket.order.entity.OrderTicketsInfo;
 import com.cloudhubs.trainticket.order.service.PreserveService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,15 +1,15 @@
-/*
-package com.cloudhubs.trainticket.adminservice;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class AdminserviceApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
-
-}
-*/
+///*
+//package com.cloudhubs.trainticket.adminservice;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class AdminserviceApplicationTests {
+//
+//    @Test
+//    void contextLoads() {
+//    }
+//
+//}
+//*/
