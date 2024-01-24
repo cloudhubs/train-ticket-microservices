@@ -60,3 +60,4 @@ public class ServiceResolverImpl implements ServiceResolver {
         return "http://localhost:8888/"+ serviceMap.get(serviceName) /*+ environment.getProperty("local.server.port")*/;
     }
 }
+
