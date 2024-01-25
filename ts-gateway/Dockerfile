@@ -1,5 +1,5 @@
 FROM openjdk:11
-EXPOSE 88889
+EXPOSE 56789
 
 # The application's jar file
 ARG JAR_FILE=target/*.jar
