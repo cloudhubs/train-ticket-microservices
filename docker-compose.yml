@@ -1,0 +1,280 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: admin@123#
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test@123#
+    ports:
+      - "3306:3306"
+    networks:
+      - ts-dkr-network
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  consul:
+    image: hashicorp/consul:1.15.4
+    ports:
+      - "8500:8500"  # Consul Web UI
+      - "8600:8600/udp"  # Consul DNS
+      - "8400:8400"  # Consul RPC
+      - "8301:8301"  # Consul Server RPC
+      - "8300:8300"  # Consul Server HTTP
+    command: "agent -dev -client=0.0.0.0"
+    environment:
+      CONSUL_BIND_INTERFACE: eth0 
+    networks:
+      - ts-dkr-network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"   # RabbitMQ default port for AMQP
+      - "15672:15672" # RabbitMQ Management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - ts-dkr-network
+
+
+  ts-order-service:
+    image: ts-order-service:latest
+    ports:
+      - "8900:8900"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-new-gateway:
+    image: ts-new-gateway:latest
+    ports:
+      - "8888:8888"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+
+  ts-food-service:
+    image: ts-food-service:latest
+    ports:
+      - "8896:8896"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-cancel-service:
+    image: ts-cancel-service:latest
+    ports:
+      - "8891:8891"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+  
+  ts-admin-service:
+    image: ts-admin-service:latest
+    ports:
+      - "8887:8887"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+  
+  ts-assurance-service:
+    image: ts-assurance-service:latest
+    ports:
+      - "8889:8889"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-auth-service:
+    image: ts-auth-service:latest
+    ports:
+      - "8890:8890"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-config-service:
+    image: ts-config-service:latest
+    ports:
+      - "8892:8892"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-consign-service:
+    image: ts-consign-service:latest
+    ports:
+      - "8893:8893"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-contacts-service:
+    image: ts-contacts-service:latest
+    ports:
+      - "8894:8894"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-delivery-service:
+    image: ts-delivery-service:latest
+    ports:
+      - "8895:8895"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-notification-service:
+    image: ts-notification-service:latest
+    ports:
+      - "8898:8898"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-order-related-service:
+    image: ts-order-related-service:latest
+    ports:
+      - "8899:8899"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-preserve-service:
+    image: ts-preserve-service:latest
+    ports:
+      - "8901:8901"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-price-service:
+    image: ts-price-service:latest
+    ports:
+      - "8902:8902"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-rebook-service:
+    image: ts-rebook-service:latest
+    ports:
+      - "8903:8903"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-route-service:
+    image: ts-route-service:latest
+    ports:
+      - "8904:8904"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-security-service:
+    image: ts-security-service:latest
+    ports:
+      - "8905:8905"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-station-service:
+    image: ts-station-service:latest
+    ports:
+      - "8906:8906"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-travel-service:
+    image: ts-travel-service:latest
+    ports:
+      - "8907:8907"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+      
+  ts-user-service:
+    image: ts-user-service:latest
+    ports:
+      - "8908:8908"
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+
+volumes:
+  mysql_data:
+  rabbitmq_data:
+    driver: local
+
+networks:
+  ts-dkr-network:
+    driver: bridge
