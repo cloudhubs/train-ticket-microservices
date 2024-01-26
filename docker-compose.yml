@@ -8,6 +8,7 @@ services:
       MYSQL_ROOT_PASSWORD: admin@123#
       MYSQL_USER: test
       MYSQL_PASSWORD: test@123#
+      MYSQLX_MAX_CONNECTIONS: 65000
     ports:
       - "3306:3306"
     networks:
@@ -39,11 +40,25 @@ services:
     networks:
       - ts-dkr-network
 
+  ts-ui-service:
+    image: ts-ui-dashboard:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - ts-new-gateway
+    networks:
+      - ts-dkr-network
+    environment:
+      GATEWAY_HOST: ts-new-gateway
 
   ts-order-service:
     image: ts-order-service:latest
     ports:
       - "8900:8900"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -55,6 +70,8 @@ services:
     image: ts-new-gateway:latest
     ports:
       - "8888:8888"
+    depends_on:
+      - consul
     networks:
       - ts-dkr-network
     environment:
@@ -64,6 +81,10 @@ services:
     image: ts-food-service:latest
     ports:
       - "8896:8896"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -75,6 +96,10 @@ services:
     image: ts-cancel-service:latest
     ports:
       - "8891:8891"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -86,6 +111,10 @@ services:
     image: ts-admin-service:latest
     ports:
       - "8887:8887"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -97,6 +126,10 @@ services:
     image: ts-assurance-service:latest
     ports:
       - "8889:8889"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -108,6 +141,10 @@ services:
     image: ts-auth-service:latest
     ports:
       - "8890:8890"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -119,6 +156,10 @@ services:
     image: ts-config-service:latest
     ports:
       - "8892:8892"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -130,6 +171,10 @@ services:
     image: ts-consign-service:latest
     ports:
       - "8893:8893"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -141,6 +186,10 @@ services:
     image: ts-contacts-service:latest
     ports:
       - "8894:8894"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -152,6 +201,10 @@ services:
     image: ts-delivery-service:latest
     ports:
       - "8895:8895"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -163,6 +216,10 @@ services:
     image: ts-notification-service:latest
     ports:
       - "8898:8898"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -174,6 +231,10 @@ services:
     image: ts-order-related-service:latest
     ports:
       - "8899:8899"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -185,6 +246,10 @@ services:
     image: ts-preserve-service:latest
     ports:
       - "8901:8901"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -196,6 +261,10 @@ services:
     image: ts-price-service:latest
     ports:
       - "8902:8902"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -207,6 +276,10 @@ services:
     image: ts-rebook-service:latest
     ports:
       - "8903:8903"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -218,6 +291,10 @@ services:
     image: ts-route-service:latest
     ports:
       - "8904:8904"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -229,6 +306,10 @@ services:
     image: ts-security-service:latest
     ports:
       - "8905:8905"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -240,6 +321,10 @@ services:
     image: ts-station-service:latest
     ports:
       - "8906:8906"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -251,6 +336,10 @@ services:
     image: ts-travel-service:latest
     ports:
       - "8907:8907"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:
@@ -262,6 +351,10 @@ services:
     image: ts-user-service:latest
     ports:
       - "8908:8908"
+    depends_on:
+      - consul
+      - mysql
+      - rabbitmq
     networks:
       - ts-dkr-network
     environment:

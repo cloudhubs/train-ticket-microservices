@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM amazoncorretto:17.0.10-al2023
 EXPOSE 8902
 
 # The application's jar file
