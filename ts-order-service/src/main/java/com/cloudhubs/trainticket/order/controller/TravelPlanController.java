@@ -19,7 +19,7 @@ import static org.springframework.http.ResponseEntity.ok;
  *//*
 
 @RestController
-@RequestMapping("api/v1/travelplanservice")
+@RequestMapping("/api/v1/travelplanservice")
 public class TravelPlanController {
 
     @Autowired
