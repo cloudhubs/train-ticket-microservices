@@ -20,7 +20,7 @@ import static org.springframework.http.ResponseEntity.ok;
  * @author fdse
  */
 @RestController
-@RequestMapping("api/v1/contactservice")
+@RequestMapping("/api/v1/contactservice")
 public class ContactsController {
 
 
