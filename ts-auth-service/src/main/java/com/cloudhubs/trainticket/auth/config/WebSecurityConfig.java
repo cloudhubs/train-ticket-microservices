@@ -2,7 +2,7 @@ package com.cloudhubs.trainticket.auth.config;
 
 
 //import edu.fudanselab.trainticket.common.*;
-import edu.fudanselab.trainticket.common.security.jwt.JWTFilter;
+import com.cloudhubs.trainticket.auth.config.jwt.JWTFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
