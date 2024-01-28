@@ -3,7 +3,7 @@ package com.cloudhubs.trainticket.config.entity;
 
 import lombok.Data;
 
-import javax.persistence.Embeddable;
+import jakarta.persistence.Embeddable;
 import java.io.Serializable;
 
 @Data

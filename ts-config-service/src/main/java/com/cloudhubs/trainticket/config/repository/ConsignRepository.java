@@ -1,6 +1,7 @@
 package com.cloudhubs.trainticket.config.repository;
 
 import com.cloudhubs.trainticket.config.entity.ConsignRecord;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,7 +12,7 @@ import java.util.Optional;
  * @author fdse
  */
 @Repository
-public interface ConsignRepository extends CrudRepository<ConsignRecord, String> {
+public interface ConsignRepository extends JpaRepository<ConsignRecord, String> {
 
     /**
      * find by account id

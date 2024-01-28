@@ -1,9 +1,9 @@
 package com.cloudhubs.trainticket.config.entity;
 
 import lombok.Data;
-import javax.persistence.Id;
+import jakarta.persistence.Id;
 
-import javax.persistence.Entity;
+import jakarta.persistence.Entity;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 

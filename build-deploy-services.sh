@@ -26,4 +26,9 @@ for item in *; do
     fi
 done
 
-#docker-compose up -d
+#sleep 5
+
+#docker-compose -f helper-services.yml up -d
+
+sleep 60
+docker-compose up -d

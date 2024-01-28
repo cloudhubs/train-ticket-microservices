@@ -17,9 +17,9 @@ spring:
     port: 5672
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: admin@123#
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/ts-auth-service?createDatabaseIfNotExist=true
-    username: root
+    password: AVNS_SuKJgZrVfCXlWtmbnrj
+    url: jdbc:mysql://db-mysql-nyc3-40046-do-user-15314830-0.c.db.ondigitalocean.com:25060/ts-auth-service?createDatabaseIfNotExist=true
+    username: doadmin
   jpa:
     hibernate:
       ddl-auto: update

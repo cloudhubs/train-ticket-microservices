@@ -15,10 +15,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 
 @SpringBootApplication
-@EnableSwagger2
-@EnableAsync
+//@EnableSwagger2
+//@EnableAsync
 //@IntegrationComponentScan
-@EnableJpaRepositories("com.cloudhubs.trainticket.config.repository")
+//@EnableJpaRepositories("com.cloudhubs.trainticket.config.repository")
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class TsConfigServiceApplication {
 
