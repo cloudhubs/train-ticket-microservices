@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.security.authentication.AuthenticationManager;
+//import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.web.client.RestTemplate;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -16,8 +16,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 //@EnableSwagger2
 //@EnableAsync
 //@IntegrationComponentScan
-//@EntityScan("com.cloudhubs.trainticket.adminservice.entity")
-//@EnableJpaRepositories("com.cloudhubs.trainticket.adminservice.repository")
+@EntityScan("com.cloudhubs.trainticket.adminservice.entity")
+@EnableJpaRepositories("com.cloudhubs.trainticket.adminservice.repository")
 public class AdminserviceApplication {
 
     public static void main(String[] args) {
