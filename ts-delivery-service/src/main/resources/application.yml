@@ -5,6 +5,7 @@ spring:
     name: ts-delivery-service
   cloud:
     consul:
+
       config:
         enabled: false
       discovery:
