@@ -1,6 +1,7 @@
 package com.cloudhubs.trainticket.delivery.repository;
 
 import com.cloudhubs.trainticket.delivery.entity.InsidePayment;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.Optional;
 /**
  * @author fdse
  */
-public interface InsidePaymentRepository extends CrudRepository<InsidePayment,String> {
+public interface InsidePaymentRepository extends JpaRepository<InsidePayment,String> {
 
     /**
      * find by id

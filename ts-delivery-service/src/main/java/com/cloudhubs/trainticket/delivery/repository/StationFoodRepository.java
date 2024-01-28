@@ -1,6 +1,7 @@
 package com.cloudhubs.trainticket.delivery.repository;
 
 import com.cloudhubs.trainticket.delivery.entity.StationFoodStore;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface StationFoodRepository extends CrudRepository<StationFoodStore, String> {
+public interface StationFoodRepository extends JpaRepository<StationFoodStore, String> {
 
     @Override
     Optional<StationFoodStore> findById(String id);
