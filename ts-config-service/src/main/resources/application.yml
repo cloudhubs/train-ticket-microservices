@@ -20,6 +20,8 @@ spring:
     password: admin@123#
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/ts-config-service?createDatabaseIfNotExist=true
     username: root
+    hikari:
+      maximum-pool-size: 2
   jpa:
     hibernate:
       ddl-auto: update

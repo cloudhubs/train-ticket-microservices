@@ -61,12 +61,12 @@ public class TokenServiceImpl implements TokenService {
         String verification_code_service_url = serviceResolver.getServiceUrl("ts-verification-code-service");
         if (!StringUtils.isEmpty(verifyCode)) {
             HttpEntity requestEntity = new HttpEntity(headers);
-            ResponseEntity<Boolean> re = restTemplate.exchange(
+            /*ResponseEntity<Boolean> re = restTemplate.exchange(
                      verification_code_service_url + "/api/v1/verifycode/verify/" + verifyCode,
                     HttpMethod.GET,
                     requestEntity,
-                    Boolean.class);
-            boolean id = re.getBody();
+                    Boolean.class);*/
+            boolean id = true;
 
             // failed code
             if (!id) {

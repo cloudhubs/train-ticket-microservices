@@ -1,6 +1,6 @@
 package com.cloudhubs.trainticket.auth;
 
-import com.alibaba.cloud.nacos.registry.NacosServiceRegistryAutoConfiguration;
+//import com.alibaba.cloud.nacos.registry.NacosServiceRegistryAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.web.client.RestTemplate;
 
-@SpringBootApplication(exclude = {NacosServiceRegistryAutoConfiguration.class})
+@SpringBootApplication/*(exclude = {NacosServiceRegistryAutoConfiguration.class})*/
 //@EnableDiscoveryClient
 public class TsAuthServiceApplication {
 
