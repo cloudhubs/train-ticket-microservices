@@ -23,8 +23,7 @@ spring:
         - id: ts-assurance-service
           uri: lb://ts-assurance-service
           predicates:
-            - Path=/api/v1/routeservice/**
-            - Path=/api/v1/trainservice/**
+            - Path=/api/v1/routeservice/**, /api/v1/trainservice/**
 
         - id: ts-auth-service
           uri: lb://ts-auth-service
@@ -34,78 +33,54 @@ spring:
         - id: ts-cancel-service
           uri: lb://ts-cancel-service
           predicates:
-            - Path=/api/v1/cancelservice/**
-            - Path=/api/v1/routeservice/**
-            - Path=/api/v1/trainservice/**
-            - Path=/api/v1/userservice/users/**
+            - Path=/api/v1/cancelservice/**, /api/v1/routeservice/**, /api/v1/trainservice/**, /api/v1/userservice/users/**
 
         - id: ts-config-service
           uri: lb://ts-config-service
           predicates:
-            - Path=/api/v1/consignservice/**
-            - Path=/api/v1/paymentservice/**
-            - Path=/api/v1/securityservice/**
-            - Path=/api/v1/userservice/users/**
-            - Path=/api/v1/verifycode/**
+            - Path=/api/v1/consignservice/**, /api/v1/paymentservice/**, /api/v1/securityservice/**, /api/v1/userservice/users/**, /api/v1/verifycode/**
 
         - id: ts-consign-service
           uri: lb://ts-consign-service
           predicates:
-            - Path=/api/v1/consignservice/**
-            - Path=/api/v1/consignpriceservice/**
-            - Path=/api/v1/executeservice
+            - Path=/api/v1/consignservice/**, /api/v1/consignpriceservice/**, /api/v1/executeservice
 
         - id: ts-contacts-service
           uri: lb://ts-contacts-service
           predicates:
-            - Path=/api/v1/adminbasicservice/**
-            - Path=/api/v1/contactservice/**
-            - Path=/api/v1/foodservice/**
-            - Path=/api/v1/stationservice/**
+            - Path=/api/v1/adminbasicservice/**, /api/v1/contactservice/**, /api/v1/foodservice/**, /api/v1/stationservice/**
 
         - id: ts-delivery-service
           uri: lb://ts-delivery-service
           predicates:
-            - Path=/api/v1/adminuserservice/users/**
-            - Path=/api/v1/inside_pay_service/**
-            - Path=/api/v1/stationfoodservice/**
-            - Path=/api/v1/trainfoodservice/**
+            - Path=/api/v1/adminuserservice/users/**, /api/v1/inside_pay_service/**, /api/v1/stationfoodservice/**, /api/v1/trainfoodservice/**
 
         - id: ts-food-service
           uri: lb://ts-food-service
           predicates:
-            - Path=/api/v1/foodservice/**
-            - Path=/api/v1/fooddeliveryservice/**
-            - Path=/api/v1/trainfoodservice/**
+            - Path=/api/v1/foodservice/**, /api/v1/fooddeliveryservice/**, /api/v1/trainfoodservice/**
 
         - id: ts-notification-service
           uri: lb://ts-notification-service
           predicates:
-            - Path=/api/v1/basicservice/**
-            - Path=/api/v1/notifyservice/**
+            - Path=/api/v1/basicservice/**, /api/v1/notifyservice/**
 
         - id: ts-order-related-service
           uri: lb://ts-order-related-service
           predicates:
-            - Path=/api/v1/assuranceservice/**
-            - Path=/api/v1/paymentservice/**
-            - Path=/api/v1/securityservice/**
+            - Path=/api/v1/assuranceservice/**, /api/v1/paymentservice/**, /api/v1/securityservice/**
 
         - id: ts-order-service
           uri: lb://ts-order-service
           predicates:
-            - Path=/api/v1/adminorderservice/**
-            - Path=/api/v1/preserveservice/**
-            - Path=/api/v1/preserveotherservice/**
+            - Path=/api/v1/adminorderservice/**, /api/v1/preserveservice/**, /api/v1/preserveotherservice/**
            # - Path=/api/v1/seatservice/**
-           # - Path=/api/v1/travelplanservice/**
-            - Path= /user/**
+           # - Path=/api/v1/travelplanservice/**,  /user/**
 
         - id: ts-preserve-service
           uri: lb://ts-preserve-service
           predicates:
-            - Path=/api/v1/orderservice/**
-            - Path=/api/v1/orderOtherService/**
+            - Path=/api/v1/orderservice/**, /api/v1/orderOtherService/**
 
         - id: ts-price-service
           uri: lb://ts-price-service
@@ -115,52 +90,33 @@ spring:
         - id: ts-rebook-service
           uri: lb://ts-rebook-service
           predicates:
-            - Path=/api/v1/admintravelservice/**
-            - Path=/api/v1/rebookservice/**
-            - Path=/api/v1/routeplanservice/**
-            - Path=/api/v1/travel2service/**
-            - Path=/api/v1/travelservice/**
-            - Path=/api/v1/waitorderservice/**
+            - Path=/api/v1/admintravelservice/**, /api/v1/rebookservice/**, /api/v1/routeplanservice/**, /api/v1/travel2service/**, /api/v1/travelservice/**, /api/v1/waitorderservice/**
 
 
         - id: ts-route-service
           uri: lb://ts-route-service
           predicates:
-            - Path=/api/v1/adminrouteservice/**
-            - Path=/api/v1/assuranceservice/**
-            - Path=/api/v1/consignservice/**
-            - Path=/api/v1/executeservice/**
-            - Path=/api/v1/routeservice/**
-            - Path=/api/v1/userservice/users/**
+            - Path=/api/v1/adminrouteservice/**, /api/v1/assuranceservice/**, /api/v1/consignservice/**, /api/v1/executeservice/**, /api/v1/routeservice/**, /api/v1/userservice/users/**
 
         - id: ts-security-service
           uri: lb://ts-security-service
           predicates:
-            - Path=/api/v1/configservice/**
-            - Path=/api/v1/consignpriceservice/**
-            - Path=/api/v1/securityservice/**
+            - Path=/api/v1/configservice/**, /api/v1/consignpriceservice/**, /api/v1/securityservice/**
 
         - id: ts-station-service
           uri: lb://ts-station-service
           predicates:
-            - Path=/api/v1/contactservice/**
-            - Path=/api/v1/stationservice/**
+            - Path=/api/v1/contactservice/**, /api/v1/stationservice/**
 
         - id: ts-travel-service
           uri: lb://ts-travel-service
           predicates:
-            - Path=/api/v1/orderservice/**
-            - Path=/api/v1/orderOtherService/**
-            - Path=/api/v1/seatservice/**
-            - Path=/api/v1/travel2service/**
-            - Path=/api/v1/waitorderservice/**
+            - Path=/api/v1/orderservice/**, /api/v1/orderOtherService/**, /api/v1/seatservice/**, /api/v1/travel2service/**, /api/v1/waitorderservice/**
 
         - id: ts-user-service
           uri: lb://ts-user-service
           predicates:
-            - Path=/api/v1/auth/**
-            - Path=/api/v1/cancelservice/**
-            - Path=/api/v1/userservice/users/**
+            - Path=/api/v1/auth/**, /api/v1/cancelservice/**, /api/v1/userservice/users/**
     consul:
       config:
         enabled: false
