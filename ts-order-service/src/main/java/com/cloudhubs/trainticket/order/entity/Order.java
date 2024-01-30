@@ -68,7 +68,7 @@ public class Order {
 
 
 
-    public Order(){
+    /*public Order(){
         boughtDate = StringUtils.Date2String(new Date(System.currentTimeMillis()));
         travelDate = StringUtils.Date2String(new Date(123456789));
         trainNumber = "G1235";
@@ -108,7 +108,7 @@ public class Order {
                 && to.equals(other.getTo())
                 && status == other.getStatus()
                 && price.equals(other.price);
-    }
+    }*/
 
     @Override
     public int hashCode() {

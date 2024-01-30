@@ -49,7 +49,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<Response> registerUser(@RequestBody UserDto userDto, @RequestHeader HttpHeaders headers) {
+    public ResponseEntity<Response> registerUser(@RequestBody UserDto userDto/*, @RequestHeader HttpHeaders headers*/) {
         UserController.LOGGER.info("[registerUser][Register user][UserName: {}]",userDto.getUserName());
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.saveUser(userDto, headers));
     }

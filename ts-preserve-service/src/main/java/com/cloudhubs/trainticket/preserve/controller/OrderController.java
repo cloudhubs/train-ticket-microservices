@@ -41,15 +41,15 @@ public class OrderController {
 
     @CrossOrigin(origins = "*")
     @PostMapping(path = "/order")
-    public HttpEntity createNewOrder(@RequestBody Order createOrder, @RequestHeader HttpHeaders headers) {
+    public HttpEntity createNewOrder(@RequestBody Order createOrder, HttpHeaders headers) {
         OrderController.LOGGER.info("[createNewOrder][Create Order][from {} to {} at {}]", createOrder.getFrom(), createOrder.getTo(), createOrder.getTravelDate());
         return ok(orderService.create(createOrder, headers));
     }
 
     @CrossOrigin(origins = "*")
     @PostMapping(path = "/order/admin")
-    public HttpEntity addcreateNewOrder(@RequestBody Order order, @RequestHeader HttpHeaders headers) {
-        return ok(orderService.addNewOrder(order, headers));
+    public HttpEntity addcreateNewOrder(@RequestBody Order order/*, @RequestHeader HttpHeaders headers*/) {
+        return ok(orderService.addNewOrder(order, null));
     }
 
     @CrossOrigin(origins = "*")

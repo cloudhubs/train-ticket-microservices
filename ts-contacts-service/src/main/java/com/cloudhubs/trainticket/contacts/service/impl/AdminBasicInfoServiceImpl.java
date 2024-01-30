@@ -70,7 +70,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
     @Override
     public Response modifyContact(Contacts mci, HttpHeaders headers) {
         Response result;
-        HttpEntity requestEntity = new HttpEntity(mci, headers);
+        HttpEntity requestEntity = new HttpEntity(mci, null);
         String contacts_service_url = serviceResolver.getServiceUrl("ts-contacts-service");
         ResponseEntity<Response> re = restTemplate.exchange(
                 contacts_service_url + "/api/v1/contactservice/contacts",
@@ -86,7 +86,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
     @Override
     public Response addContact(Contacts c, HttpHeaders headers) {
         Response result;
-        HttpEntity requestEntity = new HttpEntity(c, headers);
+        HttpEntity requestEntity = new HttpEntity(c, null);
         String contacts_service_url = serviceResolver.getServiceUrl("ts-contacts-service");
         ResponseEntity<Response> re = restTemplate.exchange(
                 contacts_service_url + "/api/v1/contactservice/contacts/admin",
@@ -179,7 +179,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
     @Override
     public Response addTrain(TrainType t, HttpHeaders headers) {
         Response result;
-        HttpEntity requestEntity = new HttpEntity(t, headers);
+        HttpEntity requestEntity = new HttpEntity(t, null);
         String train_service_url = serviceResolver.getServiceUrl("ts-train-service");
         String trains = train_service_url + "/api/v1/trainservice/trains";
         ResponseEntity<Response> re = restTemplate.exchange(

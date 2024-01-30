@@ -3,7 +3,7 @@ server:
 
 logging:
   level:
-    org.springframework.cloud.gateway: TRACE
+    org.springframework.cloud.gateway: ERROR
 
 spring:
   application:
@@ -33,12 +33,14 @@ spring:
         - id: ts-cancel-service
           uri: lb://ts-cancel-service
           predicates:
-            - Path=/api/v1/cancelservice/**, /api/v1/routeservice/**, /api/v1/trainservice/**, /api/v1/userservice/users/**
+            # , /api/v1/userservice/users/**
+            - Path=/api/v1/cancelservice/**, /api/v1/routeservice/**, /api/v1/trainservice/**
 
         - id: ts-config-service
           uri: lb://ts-config-service
           predicates:
-            - Path=/api/v1/consignservice/**, /api/v1/paymentservice/**, /api/v1/securityservice/**, /api/v1/userservice/users/**, /api/v1/verifycode/**
+            #/api/v1/userservice/users/**,
+            - Path=/api/v1/consignservice/**, /api/v1/paymentservice/**, /api/v1/securityservice/**, /api/v1/verifycode/**
 
         - id: ts-consign-service
           uri: lb://ts-consign-service
@@ -96,7 +98,8 @@ spring:
         - id: ts-route-service
           uri: lb://ts-route-service
           predicates:
-            - Path=/api/v1/adminrouteservice/**, /api/v1/assuranceservice/**, /api/v1/consignservice/**, /api/v1/executeservice/**, /api/v1/routeservice/**, /api/v1/userservice/users/**
+            # , /api/v1/userservice/users/**
+            - Path=/api/v1/adminrouteservice/**, /api/v1/assuranceservice/**, /api/v1/consignservice/**, /api/v1/executeservice/**, /api/v1/routeservice/**
 
         - id: ts-security-service
           uri: lb://ts-security-service
@@ -106,12 +109,14 @@ spring:
         - id: ts-station-service
           uri: lb://ts-station-service
           predicates:
-            - Path=/api/v1/contactservice/**, /api/v1/stationservice/**
+            #/api/v1/contactservice/**,
+            - Path= /api/v1/stationservice/**
 
         - id: ts-travel-service
           uri: lb://ts-travel-service
           predicates:
-            - Path=/api/v1/orderservice/**, /api/v1/orderOtherService/**, /api/v1/seatservice/**, /api/v1/travel2service/**, /api/v1/waitorderservice/**
+            #/api/v1/orderservice/**,
+            - Path= /api/v1/orderOtherService/**, /api/v1/seatservice/**, /api/v1/travel2service/**, /api/v1/waitorderservice/**
 
         - id: ts-user-service
           uri: lb://ts-user-service

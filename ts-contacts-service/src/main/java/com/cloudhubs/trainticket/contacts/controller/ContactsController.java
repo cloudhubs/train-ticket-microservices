@@ -43,10 +43,10 @@ public class ContactsController {
 
     @CrossOrigin(origins = "*")
     @PostMapping(path = "/contacts")
-    public ResponseEntity<Response> createNewContacts(@RequestBody Contacts aci,
-                                                      @RequestHeader HttpHeaders headers) {
+    public ResponseEntity<Response> createNewContacts(@RequestBody Contacts aci/*,
+                                                      @RequestHeader HttpHeaders headers*/) {
         ContactsController.LOGGER.info("[createNewContacts][VerifyLogin Success]");
-        return new ResponseEntity<>(contactsService.create(aci, headers), HttpStatus.CREATED);
+        return new ResponseEntity<>(contactsService.create(aci, null), HttpStatus.CREATED);
     }
 
     @CrossOrigin(origins = "*")
@@ -67,9 +67,9 @@ public class ContactsController {
 
     @CrossOrigin(origins = "*")
     @PutMapping(path = "/contacts")
-    public HttpEntity modifyContacts(@RequestBody Contacts info, @RequestHeader HttpHeaders headers) {
+    public HttpEntity modifyContacts(@RequestBody Contacts info/*, @RequestHeader HttpHeaders headers*/) {
         ContactsController.LOGGER.info("[Contacts modifyContacts][Modify Contacts] ContactsId: {}", info.getId());
-        return ok(contactsService.modify(info, headers));
+        return ok(contactsService.modify(info, null));
     }
 
     @CrossOrigin(origins = "*")

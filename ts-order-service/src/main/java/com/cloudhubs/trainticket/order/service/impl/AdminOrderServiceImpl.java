@@ -42,7 +42,7 @@ public class AdminOrderServiceImpl implements AdminOrderService {
         //Get all of the orders
         ArrayList<Order> orders = new ArrayList<>();
         //From ts-order-service
-        HttpEntity requestEntity = new HttpEntity(null);
+        HttpEntity requestEntity = new HttpEntity(headers);
 
         String order_service_url = serviceResolver.getServiceUrl("ts-order-service");
         ResponseEntity<Response<ArrayList<Order>>> re = restTemplate.exchange(
@@ -152,7 +152,7 @@ public class AdminOrderServiceImpl implements AdminOrderService {
         LOGGER.info("[addOrder][ADD ORDER][request info: {}]", request.toString());
         if (request.getTrainNumber().startsWith("G") || request.getTrainNumber().startsWith("D")) {
             AdminOrderServiceImpl.LOGGER.info("[addOrder][Add New Order][trainNumber starts With G or D]");
-            HttpEntity requestEntity = new HttpEntity(request, headers);
+            HttpEntity requestEntity = new HttpEntity(request);
             String order_service_url = serviceResolver.getServiceUrl("ts-order-service");
             ResponseEntity<Response> re = restTemplate.exchange(
                     order_service_url + "/api/v1/orderservice/order/admin",
@@ -163,10 +163,10 @@ public class AdminOrderServiceImpl implements AdminOrderService {
 
         } else {
             AdminOrderServiceImpl.LOGGER.info("[addOrder][Add New Order Other][trainNumber doesn't starts With G or D]");
-            HttpEntity requestEntity = new HttpEntity(request, headers);
+            HttpEntity requestEntity = new HttpEntity(request);
             String order_other_service_url = serviceResolver.getServiceUrl("ts-order-other-service");
             ResponseEntity<Response> re = restTemplate.exchange(
-                     order_other_service_url + "/api/v1/orderOtherService/orderOther/admin",
+                    order_other_service_url + "/api/v1/orderOtherService/orderOther/admin",
                     HttpMethod.POST,
                     requestEntity,
                     Response.class);
@@ -176,6 +176,7 @@ public class AdminOrderServiceImpl implements AdminOrderService {
         return addOrderResult;
 
     }
+
 
 
 }

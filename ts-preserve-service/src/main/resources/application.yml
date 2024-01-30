@@ -1,8 +1,15 @@
 server:
   port: 8901
+  tomcat:
+    max-http-response-header-size: 1000KB
+    max-http-form-post-size: 10MB
 spring:
   application:
     name: ts-preserve-service
+#  servlet:
+#    multipart:
+#      max-request-size: 100MB
+#      max-file-size: 2MB
   cloud:
     consul:
       config:
