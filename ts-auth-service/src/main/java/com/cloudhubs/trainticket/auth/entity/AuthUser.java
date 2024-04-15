@@ -10,7 +10,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -38,6 +38,7 @@ public class AuthUser implements UserDetails {
 
     @ElementCollection
     @CollectionTable(joinColumns = @JoinColumn(name = "user_id"))
+    @Builder.Default
     private Set<String> roles = new HashSet<>();
 
     @Override
