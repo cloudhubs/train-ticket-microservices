@@ -28,7 +28,7 @@ public class JWTUtil {
     }
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JWTUtil.class);
-    private static String secretKey = Base64.getEncoder().encodeToString("secret".getBytes());
+    private static String secretKey = Base64.getEncoder().encodeToString("super_secret_used_to_sing_with_32_bits".getBytes());
 
 
     public static Authentication getJWTAuthentication(ServletRequest request) {
