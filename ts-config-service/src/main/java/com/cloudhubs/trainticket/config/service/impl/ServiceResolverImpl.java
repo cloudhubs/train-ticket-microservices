@@ -57,7 +57,7 @@ public class ServiceResolverImpl implements ServiceResolver {
         serviceMap.put("ts-consign-service", "ts-config-service");
         serviceMap.put("ts-payment-service", "ts-config-service");
 
-        return "http://localhost:8888/"+ serviceMap.get(serviceName) /*+ environment.getProperty("local.server.port")*/;
+        return "http://ts-new-gateway:8888/"+ serviceMap.get(serviceName) /*+ environment.getProperty("local.server.port")*/;
     }
 }
 

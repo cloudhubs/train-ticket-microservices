@@ -10,8 +10,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import java.util.Base64;
 import java.util.Collection;
 import java.util.Date;
@@ -28,7 +28,7 @@ public class JWTUtil {
     }
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JWTUtil.class);
-    private static String secretKey = Base64.getEncoder().encodeToString("secret".getBytes());
+    private static String secretKey = Base64.getEncoder().encodeToString("super_secret_used_to_sing_with_32_bits".getBytes());
 
 
     public static Authentication getJWTAuthentication(ServletRequest request) {

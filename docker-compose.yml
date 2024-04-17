@@ -1,11 +1,9 @@
-version: '3.8'
-
 services:
   consul:
     image: hashicorp/consul:1.15.4
     ports:
-      - "8500:8500"  
-      - "8600:8600/udp"  
+      - "8500:8500"
+      - "8600:8600/udp"
     command: "agent -dev -client=0.0.0.0"
     healthcheck:
       test: ["CMD", "consul", "members"]
@@ -13,10 +11,10 @@ services:
       timeout: 5s
       retries: 5
     environment:
-      CONSUL_BIND_INTERFACE: eth0 
+      CONSUL_BIND_INTERFACE: eth0
     networks:
       - ts-dkr-network
-  
+
   mysql:
     image: mysql:latest
     container_name: mysql_db
@@ -48,7 +46,8 @@ services:
       - ts-dkr-network
 
   ts-new-gateway:
-    image: ts-new-gateway:latest
+    build:
+      context: ts-new-gateway
     ports:
       - "8888:8888"
     depends_on:
@@ -60,7 +59,8 @@ services:
       CONSUL_HOST: consul
 
   ts-ui-service:
-    image: ts-ui-dashboard:latest
+    build:
+      context: ts-ui-dashboard
     ports:
       - "8080:8080"
     depends_on:
@@ -72,7 +72,8 @@ services:
       GATEWAY_HOST: ts-new-gateway
 
   ts-order-service:
-    image: ts-order-service:latest
+    build:
+      context: ts-order-service
     ports:
       - "8900:8900"
     depends_on:
@@ -91,7 +92,8 @@ services:
 
 
   ts-food-service:
-    image: ts-food-service:latest
+    build:
+      context: ts-food-service
     ports:
       - "8896:8896"
     depends_on:
@@ -109,7 +111,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-cancel-service:
-    image: ts-cancel-service:latest
+    build:
+      context: ts-cancel-service
     ports:
       - "8891:8891"
     depends_on:
@@ -125,9 +128,10 @@ services:
       CONSUL_HOST: consul
       MYSQL_HOST: mysql
       RABBIT_HOST: rabbitmq
-  
+
   ts-admin-service:
-    image: ts-admin-service:latest
+    build:
+      context: ts-admin-service
     ports:
       - "8887:8887"
     depends_on:
@@ -143,9 +147,10 @@ services:
       CONSUL_HOST: consul
       MYSQL_HOST: mysql
       RABBIT_HOST: rabbitmq
-  
+
   ts-assurance-service:
-    image: ts-assurance-service:latest
+    build:
+      context: ts-assurance-service
     ports:
       - "8889:8889"
     depends_on:
@@ -163,7 +168,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-auth-service:
-    image: ts-auth-service:latest
+    build:
+      context: ts-auth-service
     ports:
       - "8890:8890"
     depends_on:
@@ -181,7 +187,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-config-service:
-    image: ts-config-service:latest
+    build:
+      context: ts-config-service
     ports:
       - "8892:8892"
     depends_on:
@@ -199,7 +206,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-consign-service:
-    image: ts-consign-service:latest
+    build:
+      context: ts-consign-service
     ports:
       - "8893:8893"
     depends_on:
@@ -217,7 +225,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-contacts-service:
-    image: ts-contacts-service:latest
+    build:
+      context: ts-contacts-service
     ports:
       - "8894:8894"
     depends_on:
@@ -235,7 +244,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-delivery-service:
-    image: ts-delivery-service:latest
+    build:
+      context: ts-delivery-service
     ports:
       - "8895:8895"
     depends_on:
@@ -253,7 +263,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-notification-service:
-    image: ts-notification-service:latest
+    build:
+      context: ts-notification-service
     ports:
       - "8898:8898"
     depends_on:
@@ -271,7 +282,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-order-related-service:
-    image: ts-order-related-service:latest
+    build:
+      context: ts-order-related-service
     ports:
       - "8899:8899"
     depends_on:
@@ -289,7 +301,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-preserve-service:
-    image: ts-preserve-service:latest
+    build:
+      context: ts-preserve-service
     ports:
       - "8901:8901"
     depends_on:
@@ -307,7 +320,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-price-service:
-    image: ts-price-service:latest
+    build:
+      context: ts-price-service
     ports:
       - "8902:8902"
     depends_on:
@@ -325,7 +339,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-rebook-service:
-    image: ts-rebook-service:latest
+    build:
+      context: ts-rebook-service
     ports:
       - "8903:8903"
     depends_on:
@@ -343,7 +358,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-route-service:
-    image: ts-route-service:latest
+    build:
+      context: ts-route-service
     ports:
       - "8904:8904"
     depends_on:
@@ -361,7 +377,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-security-service:
-    image: ts-security-service:latest
+    build:
+      context: ts-security-service
     ports:
       - "8905:8905"
     depends_on:
@@ -379,7 +396,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-station-service:
-    image: ts-station-service:latest
+    build:
+      context: ts-station-service
     ports:
       - "8906:8906"
     depends_on:
@@ -397,7 +415,8 @@ services:
       RABBIT_HOST: rabbitmq
 
   ts-travel-service:
-    image: ts-travel-service:latest
+    build:
+      context: ts-travel-service
     ports:
       - "8907:8907"
     depends_on:
@@ -413,9 +432,10 @@ services:
       CONSUL_HOST: consul
       MYSQL_HOST: mysql
       RABBIT_HOST: rabbitmq
-      
+
   ts-user-service:
-    image: ts-user-service:latest
+    build:
+      context: ts-user-service
     ports:
       - "8908:8908"
     depends_on:
