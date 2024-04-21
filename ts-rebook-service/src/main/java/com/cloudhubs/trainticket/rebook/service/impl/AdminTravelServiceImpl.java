@@ -6,6 +6,7 @@ import com.cloudhubs.trainticket.rebook.entity.TrainType;
 import com.cloudhubs.trainticket.rebook.entity.TravelInfo;
 import com.cloudhubs.trainticket.rebook.service.AdminTravelService;
 import com.cloudhubs.trainticket.rebook.service.ServiceResolver;
+import com.cloudhubs.trainticket.rebook.util.HeadersUtils;
 import com.cloudhubs.trainticket.rebook.util.JsonUtils;
 import com.cloudhubs.trainticket.rebook.util.Response;
 import org.slf4j.Logger;
@@ -104,7 +105,7 @@ public class AdminTravelServiceImpl implements AdminTravelService {
         } else {
             requestUrl = travel2_service_url + "/api/v1/travel2service/trips";
         }
-        HttpEntity requestEntity = new HttpEntity(request, headers);
+        HttpEntity requestEntity = new HttpEntity(request, HeadersUtils.prepareForSent(headers));
         ResponseEntity<Response> re = restTemplate.exchange(
                 requestUrl,
                 HttpMethod.POST,
@@ -139,7 +140,7 @@ public class AdminTravelServiceImpl implements AdminTravelService {
         } else {
             requestUrl = travel2_service_url + "/api/v1/travel2service/trips";
         }
-        HttpEntity requestEntity = new HttpEntity(request, headers);
+        HttpEntity requestEntity = new HttpEntity(request, HeadersUtils.prepareForSent(headers));
         ResponseEntity<Response> re = restTemplate.exchange(
                 requestUrl,
                 HttpMethod.PUT,

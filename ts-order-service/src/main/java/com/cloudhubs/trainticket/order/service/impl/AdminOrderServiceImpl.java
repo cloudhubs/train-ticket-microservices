@@ -3,6 +3,7 @@ package com.cloudhubs.trainticket.order.service.impl;
 import com.cloudhubs.trainticket.order.entity.Order;
 import com.cloudhubs.trainticket.order.service.AdminOrderService;
 import com.cloudhubs.trainticket.order.service.ServiceResolver;
+import com.cloudhubs.trainticket.order.util.HeadersUtils;
 import com.cloudhubs.trainticket.order.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -121,7 +122,7 @@ public class AdminOrderServiceImpl implements AdminOrderService {
         if (request.getTrainNumber().startsWith("G") || request.getTrainNumber().startsWith("D")) {
 
             AdminOrderServiceImpl.LOGGER.info("[updateOrder][Update Order][trainNumber starts With G or D]");
-            HttpEntity requestEntity = new HttpEntity(request, headers);
+            HttpEntity requestEntity = new HttpEntity(request, HeadersUtils.prepareForSent(headers));
             String order_service_url = serviceResolver.getServiceUrl("ts-order-service");
             ResponseEntity<Response> re = restTemplate.exchange(
                     order_service_url + "/api/v1/orderservice/order/admin",
@@ -132,7 +133,7 @@ public class AdminOrderServiceImpl implements AdminOrderService {
 
         } else {
             AdminOrderServiceImpl.LOGGER.info("[updateOrder][Add New Order Other][trainNumber doesn't starts With G or D]");
-            HttpEntity requestEntity = new HttpEntity(request, headers);
+            HttpEntity requestEntity = new HttpEntity(request, HeadersUtils.prepareForSent(headers));
             String order_other_service_url = serviceResolver.getServiceUrl("ts-order-other-service");
             ResponseEntity<Response> re = restTemplate.exchange(
                     order_other_service_url + "/api/v1/orderOtherService/orderOther/admin",

@@ -7,6 +7,7 @@ import com.cloudhubs.trainticket.station.entity.Contacts;
 import com.cloudhubs.trainticket.station.entity.Station;
 import com.cloudhubs.trainticket.station.service.AdminBasicInfoService;
 import com.cloudhubs.trainticket.station.service.ServiceResolver;
+import com.cloudhubs.trainticket.station.util.HeadersUtils;
 import com.cloudhubs.trainticket.station.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -70,7 +71,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
     @Override
     public Response modifyContact(Contacts mci, HttpHeaders headers) {
         Response result;
-        HttpEntity requestEntity = new HttpEntity(mci, headers);
+        HttpEntity requestEntity = new HttpEntity(mci, HeadersUtils.prepareForSent(headers));
         String contacts_service_url = serviceResolver.getServiceUrl("ts-contacts-service");
         ResponseEntity<Response> re = restTemplate.exchange(
                 contacts_service_url + "/api/v1/contactservice/contacts",
@@ -86,7 +87,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
     @Override
     public Response addContact(Contacts c, HttpHeaders headers) {
         Response result;
-        HttpEntity requestEntity = new HttpEntity(c, headers);
+        HttpEntity requestEntity = new HttpEntity(c, HeadersUtils.prepareForSent(headers));
         String contacts_service_url = serviceResolver.getServiceUrl("ts-contacts-service");
         ResponseEntity<Response> re = restTemplate.exchange(
                 contacts_service_url + "/api/v1/contactservice/contacts/admin",
@@ -117,7 +118,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
     @Override
     public Response addStation(Station s, HttpHeaders headers) {
         Response result;
-        HttpEntity requestEntity = new HttpEntity(s, headers);
+        HttpEntity requestEntity = new HttpEntity(s, HeadersUtils.prepareForSent(headers));
         String station_service_url = serviceResolver.getServiceUrl("ts-station-service");
         String stations = station_service_url + "/api/v1/stationservice/stations";
         ResponseEntity<Response> re = restTemplate.exchange(
@@ -147,7 +148,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
     @Override
     public Response modifyStation(Station s, HttpHeaders headers) {
         Response result;
-        HttpEntity requestEntity = new HttpEntity(s, headers);
+        HttpEntity requestEntity = new HttpEntity(s, HeadersUtils.prepareForSent(headers));
         String station_service_url = serviceResolver.getServiceUrl("ts-station-service");
         String stations = station_service_url + "/api/v1/stationservice/stations";
         ResponseEntity<Response> re = restTemplate.exchange(
@@ -179,7 +180,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
     @Override
     public Response addTrain(TrainType t, HttpHeaders headers) {
         Response result;
-        HttpEntity requestEntity = new HttpEntity(t, headers);
+        HttpEntity requestEntity = new HttpEntity(t, HeadersUtils.prepareForSent(headers));
         String train_service_url = serviceResolver.getServiceUrl("ts-train-service");
         String trains = train_service_url + "/api/v1/trainservice/trains";
         ResponseEntity<Response> re = restTemplate.exchange(
@@ -209,7 +210,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
     @Override
     public Response modifyTrain(TrainType t, HttpHeaders headers) {
         Response result;
-        HttpEntity requestEntity = new HttpEntity(t, headers);
+        HttpEntity requestEntity = new HttpEntity(t, HeadersUtils.prepareForSent(headers));
         String train_service_url = serviceResolver.getServiceUrl("ts-train-service");
         String trains = train_service_url + "/api/v1/trainservice/trains";
         ResponseEntity<Response> re = restTemplate.exchange(
@@ -237,7 +238,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
 
     @Override
     public Response addConfig(Config c, HttpHeaders headers) {
-        HttpEntity requestEntity = new HttpEntity(c, headers);
+        HttpEntity requestEntity = new HttpEntity(c, HeadersUtils.prepareForSent(headers));
         String config_service_url = serviceResolver.getServiceUrl("ts-config-service");
         String configs = config_service_url + "/api/v1/configservice/configs";
         ResponseEntity<Response> re = restTemplate.exchange(
@@ -262,7 +263,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
 
     @Override
     public Response modifyConfig(Config c, HttpHeaders headers) {
-        HttpEntity requestEntity = new HttpEntity(c, headers);
+        HttpEntity requestEntity = new HttpEntity(c, HeadersUtils.prepareForSent(headers));
         String config_service_url = serviceResolver.getServiceUrl("ts-config-service");
         String configs = config_service_url + "/api/v1/configservice/configs";
         ResponseEntity<Response> re = restTemplate.exchange(
@@ -288,7 +289,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
 
     @Override
     public Response addPrice(PriceInfo pi, HttpHeaders headers) {
-        HttpEntity requestEntity = new HttpEntity(pi, headers);
+        HttpEntity requestEntity = new HttpEntity(pi, HeadersUtils.prepareForSent(headers));
         String price_service_url = serviceResolver.getServiceUrl("ts-price-service");
         String prices = price_service_url + "/api/v1/priceservice/prices";
         ResponseEntity<Response> re = restTemplate.exchange(
@@ -316,7 +317,7 @@ public class AdminBasicInfoServiceImpl implements AdminBasicInfoService {
 
     @Override
     public Response modifyPrice(PriceInfo pi, HttpHeaders headers) {
-        HttpEntity requestEntity = new HttpEntity(pi, headers);
+        HttpEntity requestEntity = new HttpEntity(pi, HeadersUtils.prepareForSent(headers));
         String price_service_url = serviceResolver.getServiceUrl("ts-price-service");
         String prices = price_service_url + "/api/v1/priceservice/prices";
         ResponseEntity<Response> re = restTemplate.exchange(
