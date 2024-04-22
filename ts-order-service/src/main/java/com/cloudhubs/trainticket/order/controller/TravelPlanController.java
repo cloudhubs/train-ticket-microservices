@@ -1,5 +1,4 @@
-/*
-package com.cloudhubs.trainticket.order.orderservice.controller;
+package com.cloudhubs.trainticket.order.controller;
 
 import com.cloudhubs.trainticket.order.entity.TransferTravelInfo;
 import com.cloudhubs.trainticket.order.entity.TripInfo;
@@ -13,10 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.ResponseEntity.ok;
 
-*/
 /**
  * @author fdse
- *//*
+ */
 
 @RestController
 @RequestMapping("/api/v1/travelplanservice")
@@ -57,4 +55,4 @@ public class TravelPlanController {
     }
 
 }
-*/
+
