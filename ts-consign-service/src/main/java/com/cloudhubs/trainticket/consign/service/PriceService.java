@@ -1,8 +1,8 @@
-package com.cloudhubs.trainticket.orderrelated.service;
+package com.cloudhubs.trainticket.consign.service;
 
-import com.cloudhubs.trainticket.orderrelated.util.Response;
+import com.cloudhubs.trainticket.consign.util.Response;
 import org.springframework.http.HttpHeaders;
-import com.cloudhubs.trainticket.orderrelated.entity.PriceConfig;
+import com.cloudhubs.trainticket.consign.entity.PriceConfig;
 
 import java.util.List;
 
