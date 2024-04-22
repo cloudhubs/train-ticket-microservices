@@ -1,14 +1,15 @@
-package com.cloudhubs.trainticket.orderrelated.service.impl;
+package com.cloudhubs.trainticket.consign.service.impl;
 
-import com.cloudhubs.trainticket.orderrelated.util.Response;
+import com.cloudhubs.trainticket.consign.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
-import com.cloudhubs.trainticket.orderrelated.entity.PriceConfig;
-import com.cloudhubs.trainticket.orderrelated.repository.PriceConfigRepository;
-import com.cloudhubs.trainticket.orderrelated.service.PriceService;
+
+import com.cloudhubs.trainticket.consign.service.PriceService;
+import com.cloudhubs.trainticket.consign.entity.PriceConfig;
+import com.cloudhubs.trainticket.consign.repository.PriceConfigRepository;
 
 import java.util.*;
 

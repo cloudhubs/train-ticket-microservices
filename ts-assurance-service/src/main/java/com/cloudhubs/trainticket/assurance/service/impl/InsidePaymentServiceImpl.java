@@ -5,6 +5,7 @@ import com.cloudhubs.trainticket.assurance.repository.InsidePaymentAddMoneyRepos
 import com.cloudhubs.trainticket.assurance.repository.InsidePaymentRepository;
 import com.cloudhubs.trainticket.assurance.service.InsidePaymentService;
 import com.cloudhubs.trainticket.assurance.service.ServiceResolver;
+import com.cloudhubs.trainticket.assurance.util.HeadersUtils;
 import com.cloudhubs.trainticket.assurance.util.Response;
 import com.cloudhubs.trainticket.assurance.entity.PaymentInfo;
 import com.cloudhubs.trainticket.assurance.entity.InsidePayment;
@@ -112,7 +113,7 @@ public class InsidePaymentServiceImpl implements InsidePaymentService {
 
                 /****这里调用第三方支付***/
 
-                HttpEntity requestEntityOutsidePaySuccess = new HttpEntity(outsidePaymentInfo, headers);
+                HttpEntity requestEntityOutsidePaySuccess = new HttpEntity(outsidePaymentInfo, HeadersUtils.prepareForSent(headers));
                 String payment_service_url = serviceResolver.getServiceUrl("ts-payment-service");
                 ResponseEntity<Response> reOutsidePaySuccess = restTemplate.exchange(
                         payment_service_url + "/api/v1/paymentservice/payment",
@@ -299,7 +300,7 @@ public class InsidePaymentServiceImpl implements InsidePaymentService {
             outsidePaymentInfo.setUserId(userId);
             outsidePaymentInfo.setPrice(info.getPrice());
 
-            HttpEntity requestEntityOutsidePaySuccess = new HttpEntity(outsidePaymentInfo, headers);
+            HttpEntity requestEntityOutsidePaySuccess = new HttpEntity(outsidePaymentInfo, HeadersUtils.prepareForSent(headers));
             String payment_service_url = serviceResolver.getServiceUrl("ts-payment-service");
             ResponseEntity<Response> reOutsidePaySuccess = restTemplate.exchange(
                     payment_service_url + "/api/v1/paymentservice/payment",

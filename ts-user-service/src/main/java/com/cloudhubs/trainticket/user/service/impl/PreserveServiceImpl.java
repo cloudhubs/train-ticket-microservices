@@ -17,6 +17,7 @@ import com.cloudhubs.trainticket.user.entity.User;
 import com.cloudhubs.trainticket.user.entity.Seat;
 import com.cloudhubs.trainticket.user.entity.Consign;
 import com.cloudhubs.trainticket.user.entity.OrderStatus;
+import com.cloudhubs.trainticket.user.util.HeadersUtils;
 import com.cloudhubs.trainticket.user.util.JsonUtils;
 import com.cloudhubs.trainticket.user.util.Response;
 import com.cloudhubs.trainticket.user.util.StringUtils;
@@ -140,7 +141,7 @@ public class PreserveServiceImpl implements PreserveService {
         query.setEndPlace(oti.getTo());
         query.setDepartureTime(StringUtils.Date2String(new Date()));
 
-        HttpEntity requestEntity = new HttpEntity(query, headers);
+        HttpEntity requestEntity = new HttpEntity(query, HeadersUtils.prepareForSent(headers));
         String basic_service_url = serviceResolver.getServiceUrl("ts-basic-service");
         ResponseEntity<Response<TravelResult>> re = restTemplate.exchange(
                 basic_service_url + "/api/v1/basicservice/basic/travel",
