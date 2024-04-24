@@ -1,8 +1,8 @@
-package com.cloudhubs.trainticket.adminservice.controller;
+package com.cloudhubs.trainticket.auth.controller;
 
-import com.cloudhubs.trainticket.adminservice.dto.AuthDto;
-import com.cloudhubs.trainticket.adminservice.service.AuthUserService;
-import com.cloudhubs.trainticket.adminservice.util.Response;
+import com.cloudhubs.trainticket.auth.dto.AuthDto;
+import com.cloudhubs.trainticket.auth.service.AuthUserService;
+import com.cloudhubs.trainticket.auth.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
