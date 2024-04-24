@@ -30,7 +30,7 @@ public class ServiceResolverImpl implements ServiceResolver {
         serviceMap.put("ts-user-service", "ts-cancel-service");
         serviceMap.put("ts-admin-route-service", "ts-route-service");
         serviceMap.put("ts-preserve-other-service", "ts-order-service");
-        serviceMap.put("ts-route-service", "ts-assurance-service");
+        serviceMap.put("ts-route-service", "ts-route-service");
         serviceMap.put("ts-wait-order-service", "ts-rebook-service");
         serviceMap.put("ts-travel-plan-service", "ts-order-service");
         serviceMap.put("ts-seat-service", "ts-order-service");
