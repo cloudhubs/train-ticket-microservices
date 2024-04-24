@@ -17,7 +17,6 @@ spring:
         - id: ts-admin-service
           uri: lb://ts-admin-service
           predicates:
-              #- Path=/api/v1/users/**
               - Path=/api/v1/auth/**
 
         - id: ts-assurance-service
@@ -33,13 +32,11 @@ spring:
         - id: ts-cancel-service
           uri: lb://ts-cancel-service
           predicates:
-            # , /api/v1/userservice/users/**
             - Path=/api/v1/cancelservice/**
 
         - id: ts-config-service
           uri: lb://ts-config-service
           predicates:
-            #/api/v1/userservice/users/**,
             - Path=/api/v1/paymentservice/**, /api/v1/securityservice/**, /api/v1/verifycode/**
 
         - id: ts-consign-service
@@ -98,7 +95,6 @@ spring:
         - id: ts-route-service
           uri: lb://ts-route-service
           predicates:
-            # , /api/v1/userservice/users/**
             - Path=/api/v1/adminrouteservice/**, /api/v1/assuranceservice/**, /api/v1/executeservice/**, /api/v1/routeservice/**
 
         - id: ts-security-service
