@@ -34,7 +34,7 @@ spring:
           uri: lb://ts-cancel-service
           predicates:
             # , /api/v1/userservice/users/**
-            - Path=/api/v1/cancelservice/**, /api/v1/trainservice/**
+            - Path=/api/v1/cancelservice/**
 
         - id: ts-config-service
           uri: lb://ts-config-service
