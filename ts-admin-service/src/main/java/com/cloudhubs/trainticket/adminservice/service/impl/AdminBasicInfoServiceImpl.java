@@ -1,14 +1,14 @@
-package com.cloudhubs.trainticket.contacts.service.impl;
+package com.cloudhubs.trainticket.adminservice.service.impl;
 
-import com.cloudhubs.trainticket.contacts.entity.Config;
-import com.cloudhubs.trainticket.contacts.entity.TrainType;
-import com.cloudhubs.trainticket.contacts.entity.PriceInfo;
-import com.cloudhubs.trainticket.contacts.entity.Contacts;
-import com.cloudhubs.trainticket.contacts.entity.Station;
-import com.cloudhubs.trainticket.contacts.service.AdminBasicInfoService;
-import com.cloudhubs.trainticket.contacts.service.ServiceResolver;
-import com.cloudhubs.trainticket.contacts.util.HeadersUtils;
-import com.cloudhubs.trainticket.contacts.util.Response;
+import com.cloudhubs.trainticket.adminservice.service.AdminBasicInfoService;
+import com.cloudhubs.trainticket.adminservice.entity.Config;
+import com.cloudhubs.trainticket.adminservice.entity.TrainType;
+import com.cloudhubs.trainticket.adminservice.entity.PriceInfo;
+import com.cloudhubs.trainticket.adminservice.entity.Contacts;
+import com.cloudhubs.trainticket.adminservice.entity.Station;
+import com.cloudhubs.trainticket.adminservice.service.ServiceResolver;
+import com.cloudhubs.trainticket.adminservice.util.HeadersUtils;
+import com.cloudhubs.trainticket.adminservice.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
