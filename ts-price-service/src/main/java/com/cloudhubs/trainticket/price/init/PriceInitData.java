@@ -1,10 +1,10 @@
-package com.cloudhubs.trainticket.consign.init;
+package com.cloudhubs.trainticket.price.init;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import com.cloudhubs.trainticket.consign.entity.PriceConfig;
-import com.cloudhubs.trainticket.consign.service.PriceService;
+import com.cloudhubs.trainticket.price.entity.PriceConfig;
+import com.cloudhubs.trainticket.price.service.PriceService;
 
 import java.util.UUID;
 

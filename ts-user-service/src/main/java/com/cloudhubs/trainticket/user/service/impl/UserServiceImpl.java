@@ -87,13 +87,13 @@ public class UserServiceImpl implements UserService {
         String auth_service_url = serviceResolver.getServiceUrl("ts-auth-service");
 
         //List<Objects> auth_svcs = discoveryClient.getInstances("ts-auth-service");
-        List<Objects> auth_svcs = new ArrayList<>();
-        if(auth_svcs.size() >0 ){
-            Object auth_svc = auth_svcs.get(0);
-            //LOGGER.info("[createDefaultAuthUser][CALL TO AUTH][auth_svc host: {}][auth_svc port: {}]", auth_svc.getHost(), auth_svc.getPort());
-        }else{
-            LOGGER.info("[createDefaultAuthUser][CALL TO AUTH][can not get auth url]");
-        }
+        // List<Objects> auth_svcs = new ArrayList<>();
+        // if(auth_svcs.size() >0 ){
+        //     Object auth_svc = auth_svcs.get(0);
+        //     //LOGGER.info("[createDefaultAuthUser][CALL TO AUTH][auth_svc host: {}][auth_svc port: {}]", auth_svc.getHost(), auth_svc.getPort());
+        // }else{
+        //     LOGGER.info("[createDefaultAuthUser][CALL TO AUTH][can not get auth url]");
+        // }
 
         ResponseEntity<Response<AuthDto>> res  = restTemplate.exchange(auth_service_url + "/api/v1/auth",
                 HttpMethod.POST,

@@ -24,16 +24,16 @@ public class ServiceResolverImpl implements ServiceResolver {
         serviceMap.put("ts-preserve-service", "ts-order-service");
         serviceMap.put("ts-travel-service", "ts-rebook-service");
         serviceMap.put("ts-admin-order-service", "ts-order-service");
-        serviceMap.put("ts-auth-service", "ts-admin-service");
+        serviceMap.put("ts-auth-service", "ts-auth-service");
         serviceMap.put("ts-order-other-service", "ts-preserve-service");
         serviceMap.put("ts-basic-service", "ts-notification-service");
         serviceMap.put("ts-admin-travel-service", "ts-rebook-service");
         serviceMap.put("ts-food-service", "ts-contacts-service");
         serviceMap.put("ts-train-food-service", "ts-delivery-service");
-        serviceMap.put("ts-user-service", "ts-cancel-service");
+        serviceMap.put("ts-user-service", "ts-user-service");
         serviceMap.put("ts-admin-route-service", "ts-route-service");
         serviceMap.put("ts-preserve-other-service", "ts-order-service");
-        serviceMap.put("ts-route-service", "ts-assurance-service");
+        serviceMap.put("ts-route-service", "ts-route-service");
         serviceMap.put("ts-wait-order-service", "ts-rebook-service");
         serviceMap.put("ts-travel-plan-service", "ts-order-service");
         serviceMap.put("ts-seat-service", "ts-order-service");
@@ -54,7 +54,7 @@ public class ServiceResolverImpl implements ServiceResolver {
         serviceMap.put("ts-assurance-service", "ts-order-related-service");
         serviceMap.put("ts-order-service", "ts-preserve-service");
         serviceMap.put("ts-price-service", "ts-price-service");
-        serviceMap.put("ts-admin-basic-info-service", "ts-contacts-service");
+        serviceMap.put("ts-admin-basic-info-service", "ts-admin-service");
         serviceMap.put("ts-inside-payment-service", "ts-delivery-service");
         serviceMap.put("ts-station-food-service", "ts-delivery-service");
         serviceMap.put("ts-consign-service", "ts-config-service");
