@@ -27,7 +27,7 @@ public class TrainFood {
     private String tripId;
 
     @ElementCollection(targetClass = Food.class)
-    @CollectionTable(name = "train_food_list", joinColumns = @JoinColumn(name = "trip_id"))
+    @CollectionTable(name = "train_food_list", joinColumns = @JoinColumn(name = "trip_id", referencedColumnName = "tripId"))
     private List<Food> foodList;
 
     public TrainFood(){
