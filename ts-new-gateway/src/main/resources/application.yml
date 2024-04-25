@@ -37,7 +37,7 @@ spring:
         - id: ts-config-service
           uri: lb://ts-config-service
           predicates:
-            - Path=/api/v1/paymentservice/**, /api/v1/securityservice/**, /api/v1/verifycode/**
+            - Path=/api/v1/paymentservice/**, /api/v1/verifycode/**
 
         - id: ts-consign-service
           uri: lb://ts-consign-service
@@ -67,7 +67,7 @@ spring:
         - id: ts-order-related-service
           uri: lb://ts-order-related-service
           predicates:
-            - Path=/api/v1/assuranceservice/**, /api/v1/paymentservice/**, /api/v1/securityservice/**
+            - Path=/api/v1/assuranceservice/**, /api/v1/paymentservice/**
 
         - id: ts-order-service
           uri: lb://ts-order-service
