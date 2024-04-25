@@ -57,7 +57,7 @@ spring:
         - id: ts-food-service
           uri: lb://ts-food-service
           predicates:
-            - Path=/api/v1/foodservice/**, /api/v1/fooddeliveryservice/**, /api/v1/trainfoodservice/**
+            - Path=/api/v1/foodservice/**, /api/v1/fooddeliveryservice/**
 
         - id: ts-notification-service
           uri: lb://ts-notification-service
