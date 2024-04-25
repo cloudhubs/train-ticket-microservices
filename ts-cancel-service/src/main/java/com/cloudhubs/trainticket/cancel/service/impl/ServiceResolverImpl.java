@@ -61,7 +61,7 @@ public class ServiceResolverImpl implements ServiceResolver {
         serviceMap.put("ts-price-service", "ts-price-service");
         serviceMap.put("ts-admin-basic-info-service", "ts-admin-service");
         serviceMap.put("ts-inside-payment-service", "ts-delivery-service");
-        serviceMap.put("ts-station-food-service", "ts-delivery-service");
+        serviceMap.put("ts-station-food-service", "ts-food-service");
         serviceMap.put("ts-consign-service", "ts-config-service");
         serviceMap.put("ts-payment-service", "ts-config-service");
 

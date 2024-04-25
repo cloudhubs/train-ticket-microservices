@@ -52,12 +52,12 @@ spring:
         - id: ts-delivery-service
           uri: lb://ts-delivery-service
           predicates:
-            - Path=/api/v1/adminuserservice/users/**, /api/v1/inside_pay_service/**, /api/v1/stationfoodservice/**, /api/v1/trainfoodservice/**
+            - Path=/api/v1/adminuserservice/users/**, /api/v1/inside_pay_service/**, /api/v1/trainfoodservice/**
 
         - id: ts-food-service
           uri: lb://ts-food-service
           predicates:
-            - Path=/api/v1/foodservice/**, /api/v1/fooddeliveryservice/**
+            - Path=/api/v1/foodservice/**, /api/v1/fooddeliveryservice/**, /api/v1/stationfoodservice/**
 
         - id: ts-notification-service
           uri: lb://ts-notification-service
