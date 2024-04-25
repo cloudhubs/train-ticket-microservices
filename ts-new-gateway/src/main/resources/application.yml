@@ -73,7 +73,6 @@ spring:
           uri: lb://ts-order-service
           predicates:
             - Path=/api/v1/adminorderservice/**, /api/v1/preserveservice/**, /api/v1/preserveotherservice/**, /api/v1/travelplanservice/**
-           # - Path=/api/v1/seatservice/**
            # - Path=/api/v1/travelplanservice/**,  /user/**
 
         - id: ts-preserve-service
