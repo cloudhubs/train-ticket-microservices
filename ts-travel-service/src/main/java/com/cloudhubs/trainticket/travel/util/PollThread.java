@@ -44,7 +44,7 @@ public class PollThread extends Thread{
     @Override
     public void run() {
         String service_url=serviceResolver.getServiceUrl("ts-preserve-service");
-        HttpEntity requestEntityPreserve = new HttpEntity(waitListOrderVO,httpHeaders);
+        HttpEntity requestEntityPreserve = new HttpEntity(waitListOrderVO,HeadersUtils.prepareForSent(httpHeaders));
 
         //TODO compare with waitUntilTime
         while(true){
