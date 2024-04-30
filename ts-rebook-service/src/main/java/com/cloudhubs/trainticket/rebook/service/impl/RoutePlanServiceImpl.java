@@ -8,6 +8,7 @@ import com.cloudhubs.trainticket.rebook.entity.TripInfo;
 import com.cloudhubs.trainticket.rebook.entity.RoutePlanInfo;
 import com.cloudhubs.trainticket.rebook.entity.TripAllDetail;
 import com.cloudhubs.trainticket.rebook.entity.TripAllDetailInfo;
+import com.cloudhubs.trainticket.rebook.util.HeadersUtils;
 import com.cloudhubs.trainticket.rebook.util.Response;
 import com.cloudhubs.trainticket.rebook.util.StringUtils;
 import org.slf4j.Logger;
@@ -313,7 +314,7 @@ public class RoutePlanServiceImpl implements RoutePlanService {
 
     private ArrayList<TripResponse> getTripFromHighSpeedTravelServive(TripInfo info, HttpHeaders headers) {
         RoutePlanServiceImpl.LOGGER.info("[getTripFromHighSpeedTravelServive][trip info: {}]", info);
-        HttpEntity requestEntity = new HttpEntity(info, null);
+        HttpEntity requestEntity = new HttpEntity(info, HeadersUtils.prepareForSent(headers));
         String travel_service_url=serviceResolver.getServiceUrl("ts-travel-service");
         ResponseEntity<Response<ArrayList<TripResponse>>> re = restTemplate.exchange(
                 travel_service_url + "/api/v1/travelservice/trips/left",
@@ -328,7 +329,7 @@ public class RoutePlanServiceImpl implements RoutePlanService {
     }
 
     private ArrayList<TripResponse> getTripFromNormalTrainTravelService(TripInfo info, HttpHeaders headers) {
-        HttpEntity requestEntity = new HttpEntity(info, null);
+        HttpEntity requestEntity = new HttpEntity(info, HeadersUtils.prepareForSent(headers));
         String travel2_service_url=serviceResolver.getServiceUrl("ts-travel2-service");
         ResponseEntity<Response<ArrayList<TripResponse>>> re = restTemplate.exchange(
                 travel2_service_url + "/api/v1/travel2service/trips/left",

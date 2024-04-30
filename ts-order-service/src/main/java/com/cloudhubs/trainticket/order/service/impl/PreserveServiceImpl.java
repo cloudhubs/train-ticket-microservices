@@ -290,7 +290,7 @@ public class PreserveServiceImpl implements PreserveService {
         seatRequest.setTotalNum(totalNum);
         seatRequest.setStations(stationList);
 
-        HttpEntity requestEntityTicket = new HttpEntity(seatRequest, httpHeaders);
+        HttpEntity requestEntityTicket = new HttpEntity(seatRequest, HeadersUtils.prepareForSent(httpHeaders));
         String seat_service_url = serviceResolver.getServiceUrl("ts-seat-service");
         ResponseEntity<Response<Ticket>> reTicket = restTemplate.exchange(
                 seat_service_url + "/api/v1/seatservice/seats",
@@ -377,7 +377,7 @@ public class PreserveServiceImpl implements PreserveService {
     private Response<TripAllDetail> getTripAllDetailInformation(TripAllDetailInfo gtdi, HttpHeaders httpHeaders) {
         PreserveServiceImpl.LOGGER.info("[getTripAllDetailInformation][Preserve Other Service][Get Trip All Detail Information]");
 
-        HttpEntity requestGetTripAllDetailResult = new HttpEntity(gtdi, httpHeaders);
+        HttpEntity requestGetTripAllDetailResult = new HttpEntity(gtdi, HeadersUtils.prepareForSent(httpHeaders));
         String travel_service_url = serviceResolver.getServiceUrl("ts-travel-service");
         ResponseEntity<Response<TripAllDetail>> reGetTripAllDetailResult = restTemplate.exchange(
                 travel_service_url + "/api/v1/travelservice/trip_detail",
@@ -408,7 +408,7 @@ public class PreserveServiceImpl implements PreserveService {
     private Response createOrder(Order coi, HttpHeaders httpHeaders) {
         PreserveServiceImpl.LOGGER.info("[createOrder][Preserve Service][create order]");
 
-        HttpEntity requestEntityCreateOrderResult = new HttpEntity(coi, httpHeaders);
+        HttpEntity requestEntityCreateOrderResult = new HttpEntity(coi, HeadersUtils.prepareForSent(httpHeaders));
         String order_service_url = serviceResolver.getServiceUrl("ts-order-service");
         ResponseEntity<Response<Order>> reCreateOrderResult = restTemplate.exchange(
                 order_service_url + "/api/v1/orderservice/order",
@@ -423,7 +423,7 @@ public class PreserveServiceImpl implements PreserveService {
     private Response createFoodOrder(FoodOrder afi, HttpHeaders httpHeaders) {
         PreserveServiceImpl.LOGGER.info("[createFoodOrder][Preserve Service][Add Preserve food Order]");
 
-        HttpEntity requestEntityAddFoodOrderResult = new HttpEntity(afi, httpHeaders);
+        HttpEntity requestEntityAddFoodOrderResult = new HttpEntity(afi, HeadersUtils.prepareForSent(httpHeaders));
         String food_service_url = serviceResolver.getServiceUrl("ts-food-service");
         ResponseEntity<Response> reAddFoodOrderResult = restTemplate.exchange(
                 food_service_url + "/api/v1/foodservice/orders",
@@ -437,7 +437,7 @@ public class PreserveServiceImpl implements PreserveService {
     private Response createConsign(Consign cr, HttpHeaders httpHeaders) {
         PreserveServiceImpl.LOGGER.info("[createConsign][Preserve Service][Add Condign");
 
-        HttpEntity requestEntityResultForTravel = new HttpEntity(cr, httpHeaders);
+        HttpEntity requestEntityResultForTravel = new HttpEntity(cr, HeadersUtils.prepareForSent(httpHeaders));
         String consign_service_url = serviceResolver.getServiceUrl("ts-consign-service");
         ResponseEntity<Response> reResultForTravel = restTemplate.exchange(
                 consign_service_url + "/api/v1/consignservice/consigns",

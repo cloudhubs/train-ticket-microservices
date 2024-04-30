@@ -33,7 +33,7 @@ public class ServiceResolverImpl implements ServiceResolver {
         serviceMap.put("ts-order-other-service", "ts-preserve-service");
         serviceMap.put("ts-basic-service", "ts-notification-service");
         serviceMap.put("ts-admin-travel-service", "ts-rebook-service");
-        serviceMap.put("ts-food-service", "ts-contacts-service");
+        serviceMap.put("ts-food-service", "ts-food-service");
         serviceMap.put("ts-train-food-service", "ts-delivery-service");
         serviceMap.put("ts-user-service", "ts-user-service");
         serviceMap.put("ts-admin-route-service", "ts-route-service");
@@ -41,9 +41,9 @@ public class ServiceResolverImpl implements ServiceResolver {
         serviceMap.put("ts-route-service", "ts-route-service");
         serviceMap.put("ts-wait-order-service", "ts-rebook-service");
         serviceMap.put("ts-travel-plan-service", "ts-order-service");
-        serviceMap.put("ts-seat-service", "ts-order-service");
+        serviceMap.put("ts-seat-service", "ts-travel-service");
         serviceMap.put("ts-config-service", "ts-security-service");
-        serviceMap.put("ts-security-service", "ts-config-service");
+        serviceMap.put("ts-security-service", "ts-security-service");
         serviceMap.put("ts-verification-code-service", "ts-config-service");
         serviceMap.put("ts-admin-user-service", "ts-delivery-service");
         serviceMap.put("ts-contacts-service", "ts-contacts-service");
@@ -61,8 +61,8 @@ public class ServiceResolverImpl implements ServiceResolver {
         serviceMap.put("ts-price-service", "ts-price-service");
         serviceMap.put("ts-admin-basic-info-service", "ts-admin-service");
         serviceMap.put("ts-inside-payment-service", "ts-delivery-service");
-        serviceMap.put("ts-station-food-service", "ts-delivery-service");
-        serviceMap.put("ts-consign-service", "ts-config-service");
+        serviceMap.put("ts-station-food-service", "ts-food-service");
+        serviceMap.put("ts-consign-service", "ts-consign-service");
         serviceMap.put("ts-payment-service", "ts-config-service");
 
         return "http://ts-new-gateway:8888/"+ serviceMap.get(serviceName) /*+ environment.getProperty("local.server.port")*/;

@@ -1,10 +1,10 @@
-package com.cloudhubs.trainticket.config.init;
+package com.cloudhubs.trainticket.security.init;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import com.cloudhubs.trainticket.config.entity.SecurityConfig;
-import com.cloudhubs.trainticket.config.service.SecurityService;
+import com.cloudhubs.trainticket.security.entity.SecurityConfig;
+import com.cloudhubs.trainticket.security.service.SecurityService;
 
 /**
  * @author fdse

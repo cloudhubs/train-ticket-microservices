@@ -41,7 +41,7 @@ public class OrderController {
 
     @CrossOrigin(origins = "*")
     @PostMapping(path = "/order")
-    public HttpEntity createNewOrder(@RequestBody Order createOrder, HttpHeaders headers) {
+    public HttpEntity createNewOrder(@RequestBody Order createOrder, @RequestHeader HttpHeaders headers) {
         OrderController.LOGGER.info("[createNewOrder][Create Order][from {} to {} at {}]", createOrder.getFrom(), createOrder.getTo(), createOrder.getTravelDate());
         return ok(orderService.create(createOrder, headers));
     }

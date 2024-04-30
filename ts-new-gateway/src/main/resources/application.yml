@@ -37,7 +37,7 @@ spring:
         - id: ts-config-service
           uri: lb://ts-config-service
           predicates:
-            - Path=/api/v1/paymentservice/**, /api/v1/securityservice/**, /api/v1/verifycode/**
+            - Path=/api/v1/paymentservice/**, /api/v1/verifycode/**
 
         - id: ts-consign-service
           uri: lb://ts-consign-service
@@ -47,17 +47,17 @@ spring:
         - id: ts-contacts-service
           uri: lb://ts-contacts-service
           predicates:
-            - Path=/api/v1/contactservice/**, /api/v1/foodservice/**, /api/v1/stationservice/**
+            - Path=/api/v1/contactservice/**, /api/v1/stationservice/**
 
         - id: ts-delivery-service
           uri: lb://ts-delivery-service
           predicates:
-            - Path=/api/v1/adminuserservice/users/**, /api/v1/inside_pay_service/**, /api/v1/stationfoodservice/**, /api/v1/trainfoodservice/**
+            - Path=/api/v1/adminuserservice/users/**, /api/v1/inside_pay_service/**, /api/v1/trainfoodservice/**
 
         - id: ts-food-service
           uri: lb://ts-food-service
           predicates:
-            - Path=/api/v1/foodservice/**, /api/v1/fooddeliveryservice/**, /api/v1/trainfoodservice/**
+            - Path=/api/v1/foodservice/**, /api/v1/fooddeliveryservice/**, /api/v1/stationfoodservice/**
 
         - id: ts-notification-service
           uri: lb://ts-notification-service
@@ -67,13 +67,12 @@ spring:
         - id: ts-order-related-service
           uri: lb://ts-order-related-service
           predicates:
-            - Path=/api/v1/assuranceservice/**, /api/v1/paymentservice/**, /api/v1/securityservice/**
+            - Path=/api/v1/assuranceservice/**, /api/v1/paymentservice/**
 
         - id: ts-order-service
           uri: lb://ts-order-service
           predicates:
             - Path=/api/v1/adminorderservice/**, /api/v1/preserveservice/**, /api/v1/preserveotherservice/**, /api/v1/travelplanservice/**
-           # - Path=/api/v1/seatservice/**
            # - Path=/api/v1/travelplanservice/**,  /user/**
 
         - id: ts-preserve-service

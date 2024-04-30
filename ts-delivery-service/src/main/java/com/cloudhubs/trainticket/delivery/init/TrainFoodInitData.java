@@ -1,13 +1,13 @@
-package com.cloudhubs.trainticket.food.init;
+package com.cloudhubs.trainticket.delivery.init;
 
-import com.cloudhubs.trainticket.food.entity.Food;
+import com.cloudhubs.trainticket.delivery.entity.Food;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import com.cloudhubs.trainticket.food.entity.TrainFood;
-import com.cloudhubs.trainticket.food.service.TrainFoodService;
+import com.cloudhubs.trainticket.delivery.entity.TrainFood;
+import com.cloudhubs.trainticket.delivery.service.TrainFoodService;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
