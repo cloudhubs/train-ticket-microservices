@@ -1,0 +1,34 @@
+server:
+  port: 8901
+  tomcat:
+    max-http-response-header-size: 1000KB
+    max-http-form-post-size: 10MB
+spring:
+  application:
+    name: ts-preserve-service
+#  servlet:
+#    multipart:
+#      max-request-size: 100MB
+#      max-file-size: 2MB
+  cloud:
+    consul:
+      config:
+        enabled: false
+      discovery:
+        instance-id: ${spring.application.name}-${server.port}-${random.int[1,99]}
+        prefer-ip-address: true
+      host: ${CONSUL_HOST:localhost}
+      port: 8500
+  rabbitmq:
+    host: ${RABBIT_HOST:localhost}
+    port: 5672
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: admin@123#
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/ts-preserve-service?createDatabaseIfNotExist=true
+    username: root
+    hikari:
+      maximum-pool-size: 2
+  jpa:
+    hibernate:
+      ddl-auto: update

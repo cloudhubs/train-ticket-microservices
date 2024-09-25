@@ -1,0 +1,27 @@
+server:
+  port: 8890
+spring:
+  application:
+    name: ts-auth-service
+  cloud:
+    consul:
+      config:
+        enabled: false
+      discovery:
+        instance-id: ${spring.application.name}-${server.port}-${random.int[1,99]}
+        prefer-ip-address: true
+      host: ${CONSUL_HOST:localhost}
+      port: 8500
+  rabbitmq:
+    host: ${RABBIT_HOST:localhost}
+    port: 5672
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: admin@123#
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/ts-auth-service?createDatabaseIfNotExist=true
+    username: root
+    hikari:
+      maximum-pool-size: 2
+  jpa:
+    hibernate:
+      ddl-auto: update

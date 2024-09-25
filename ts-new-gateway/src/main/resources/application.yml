@@ -1,0 +1,124 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    org.springframework.cloud.gateway: ERROR
+
+spring:
+  application:
+    name: ts-new-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: ts-admin-service
+          uri: lb://ts-admin-service
+          predicates:
+              - Path=/api/v1/adminbasicservice/**
+
+        - id: ts-assurance-service
+          uri: lb://ts-assurance-service
+          predicates:
+            - Path=/api/v1/trainservice/**
+
+        - id: ts-auth-service
+          uri: lb://ts-auth-service
+          predicates:
+            - Path=/api/v1/users/**
+
+        - id: ts-cancel-service
+          uri: lb://ts-cancel-service
+          predicates:
+            - Path=/api/v1/cancelservice/**
+
+        - id: ts-config-service
+          uri: lb://ts-config-service
+          predicates:
+            - Path=/api/v1/paymentservice/**, /api/v1/verifycode/**
+
+        - id: ts-consign-service
+          uri: lb://ts-consign-service
+          predicates:
+            - Path=/api/v1/consignservice/**, /api/v1/consignpriceservice/**, /api/v1/executeservice
+
+        - id: ts-contacts-service
+          uri: lb://ts-contacts-service
+          predicates:
+            - Path=/api/v1/contactservice/**, /api/v1/stationservice/**
+
+        - id: ts-delivery-service
+          uri: lb://ts-delivery-service
+          predicates:
+            - Path=/api/v1/adminuserservice/users/**, /api/v1/inside_pay_service/**, /api/v1/trainfoodservice/**
+
+        - id: ts-food-service
+          uri: lb://ts-food-service
+          predicates:
+            - Path=/api/v1/foodservice/**, /api/v1/fooddeliveryservice/**, /api/v1/stationfoodservice/**
+
+        - id: ts-notification-service
+          uri: lb://ts-notification-service
+          predicates:
+            - Path=/api/v1/basicservice/**, /api/v1/notifyservice/**
+
+        - id: ts-order-related-service
+          uri: lb://ts-order-related-service
+          predicates:
+            - Path=/api/v1/assuranceservice/**, /api/v1/paymentservice/**
+
+        - id: ts-order-service
+          uri: lb://ts-order-service
+          predicates:
+            - Path=/api/v1/adminorderservice/**, /api/v1/preserveservice/**, /api/v1/preserveotherservice/**, /api/v1/travelplanservice/**
+           # - Path=/api/v1/travelplanservice/**,  /user/**
+
+        - id: ts-preserve-service
+          uri: lb://ts-preserve-service
+          predicates:
+            - Path=/api/v1/orderservice/**, /api/v1/orderOtherService/**
+
+        - id: ts-price-service
+          uri: lb://ts-price-service
+          predicates:
+            - Path=/api/v1/priceservice/**
+
+        - id: ts-rebook-service
+          uri: lb://ts-rebook-service
+          predicates:
+            - Path=/api/v1/admintravelservice/**, /api/v1/rebookservice/**, /api/v1/routeplanservice/**, /api/v1/travel2service/**, /api/v1/travelservice/**, /api/v1/waitorderservice/**
+
+
+        - id: ts-route-service
+          uri: lb://ts-route-service
+          predicates:
+            - Path=/api/v1/adminrouteservice/**, /api/v1/assuranceservice/**, /api/v1/executeservice/**, /api/v1/routeservice/**
+
+        - id: ts-security-service
+          uri: lb://ts-security-service
+          predicates:
+            - Path=/api/v1/configservice/**, /api/v1/consignpriceservice/**, /api/v1/securityservice/**
+
+        - id: ts-station-service
+          uri: lb://ts-station-service
+          predicates:
+            #/api/v1/contactservice/**,
+            - Path= /api/v1/stationservice/**
+
+        - id: ts-travel-service
+          uri: lb://ts-travel-service
+          predicates:
+            #/api/v1/orderservice/**,
+            - Path= /api/v1/orderOtherService/**, /api/v1/seatservice/**, /api/v1/travel2service/**, /api/v1/waitorderservice/**
+
+        - id: ts-user-service
+          uri: lb://ts-user-service
+          predicates:
+            - Path=/api/v1/auth/**, /api/v1/cancelservice/**, /api/v1/userservice/users/**
+    consul:
+      config:
+        enabled: false
+      host: ${CONSUL_HOST:localhost}
+      port: 8500

@@ -1,0 +1,462 @@
+services:
+  consul:
+    image: hashicorp/consul:1.15.4
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+    command: "agent -dev -client=0.0.0.0"
+    healthcheck:
+      test: ["CMD", "consul", "members"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      CONSUL_BIND_INTERFACE: eth0
+    networks:
+      - ts-dkr-network
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: admin@123#
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test@123#
+      MAX_CONNECTIONS: 100000
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "3306:3306"
+    networks:
+      - ts-dkr-network
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"   # RabbitMQ default port for AMQP
+      - "15672:15672" # RabbitMQ Management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - ts-dkr-network
+
+  ts-new-gateway:
+    build:
+      context: ts-new-gateway
+    ports:
+      - "8888:8888"
+    depends_on:
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+
+  ts-ui-service:
+    build:
+      context: ts-ui-dashboard
+    ports:
+      - "8080:8080"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+    networks:
+      - ts-dkr-network
+    environment:
+      GATEWAY_HOST: ts-new-gateway
+
+  ts-order-service:
+    build:
+      context: ts-order-service
+    ports:
+      - "8900:8900"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+
+  ts-food-service:
+    build:
+      context: ts-food-service
+    ports:
+      - "8896:8896"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-cancel-service:
+    build:
+      context: ts-cancel-service
+    ports:
+      - "8891:8891"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-admin-service:
+    build:
+      context: ts-admin-service
+    ports:
+      - "8887:8887"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-assurance-service:
+    build:
+      context: ts-assurance-service
+    ports:
+      - "8889:8889"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-auth-service:
+    build:
+      context: ts-auth-service
+    ports:
+      - "8890:8890"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-config-service:
+    build:
+      context: ts-config-service
+    ports:
+      - "8892:8892"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-consign-service:
+    build:
+      context: ts-consign-service
+    ports:
+      - "8893:8893"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-contacts-service:
+    build:
+      context: ts-contacts-service
+    ports:
+      - "8894:8894"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-delivery-service:
+    build:
+      context: ts-delivery-service
+    ports:
+      - "8895:8895"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-notification-service:
+    build:
+      context: ts-notification-service
+    ports:
+      - "8898:8898"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-order-related-service:
+    build:
+      context: ts-order-related-service
+    ports:
+      - "8899:8899"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-preserve-service:
+    build:
+      context: ts-preserve-service
+    ports:
+      - "8901:8901"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-price-service:
+    build:
+      context: ts-price-service
+    ports:
+      - "8902:8902"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-rebook-service:
+    build:
+      context: ts-rebook-service
+    ports:
+      - "8903:8903"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-route-service:
+    build:
+      context: ts-route-service
+    ports:
+      - "8904:8904"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-security-service:
+    build:
+      context: ts-security-service
+    ports:
+      - "8905:8905"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-station-service:
+    build:
+      context: ts-station-service
+    ports:
+      - "8906:8906"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-travel-service:
+    build:
+      context: ts-travel-service
+    ports:
+      - "8907:8907"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+  ts-user-service:
+    build:
+      context: ts-user-service
+    ports:
+      - "8908:8908"
+    depends_on:
+      ts-new-gateway:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+      consul:
+        condition: service_healthy
+    networks:
+      - ts-dkr-network
+    environment:
+      CONSUL_HOST: consul
+      MYSQL_HOST: mysql
+      RABBIT_HOST: rabbitmq
+
+volumes:
+  mysql_data:
+  rabbitmq_data:
+    driver: local
+
+networks:
+  ts-dkr-network:
+    driver: bridge

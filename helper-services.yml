@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+
+  consul:
+    image: hashicorp/consul:1.15.4
+    ports:
+      - "8500:8500"  
+      - "8600:8600/udp"  
+    command: "agent -dev -client=0.0.0.0"
+    healthcheck:
+      test: ["CMD", "consul", "members"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      CONSUL_BIND_INTERFACE: eth0 
+    networks:
+      - ts-dkr-network
+  
+  mysql:
+    image: mysql:latest
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: admin@123#
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test@123#
+      MAX_CONNECTIONS: 100000
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "3306:3306"
+    networks:
+      - ts-dkr-network
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"   # RabbitMQ default port for AMQP
+      - "15672:15672" # RabbitMQ Management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - ts-dkr-network
+
+volumes:
+  mysql_data:
+  rabbitmq_data:
+    driver: local
+
+networks:
+  ts-dkr-network:
+    driver: bridge

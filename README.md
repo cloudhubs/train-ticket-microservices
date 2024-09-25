@@ -9,8 +9,6 @@ Docker Engine: 26.0.0
 Docker Compose: v2.26.1-desktop.1
 ```
 
-
-
 Lower versions should work too
 
 ## Start system
